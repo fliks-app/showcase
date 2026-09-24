@@ -164,44 +164,8 @@
       "player": "Le lecteur vidéo avec les contrôles de sous-titres et de qualité"
     }
   },
-  "tv": {
-    "eyebrow": "Grand écran",
-    "title": "Pensé pour le salon",
-    "subtitle": "Des applications pour Apple TV, Samsung, LG et Android TV, faites pour la télécommande et le canapé.",
-    "appletv": "Apple TV",
-    "samsung": "Samsung TV",
-    "alt": {
-      "appletvHome": "Écran d'accueil de Fliks sur Apple TV",
-      "appletvLibrary": "Une liste de films sur Apple TV",
-      "appletvDetail": "Une page de détail de film sur Apple TV",
-      "appletvPlayer": "Le lecteur sur Apple TV",
-      "tizenDetail": "Une page de détail de film sur Samsung TV",
-      "tizenPlayer": "Le lecteur sur Samsung TV"
-    }
-  },
   "plugins": {
-    "eyebrow": "Modulable par nature",
-    "title": "Plugins",
-    "subtitle": "Fliks ne fournit aucun moyen de se procurer des médias. Vous installez ce que vous voulez depuis Paramètres > Plugins.",
-    "items": [
-      {
-        "title": "Le plugin Download",
-        "text": "Ajoute la recherche sur les indexeurs, la gestion des clients de téléchargement et la chaîne de récupération. Une fois installé, il apparaît dans l'interface."
-      },
-      {
-        "title": "Archives signées",
-        "text": "Chaque archive de plugin est signée, et la signature est vérifiée avant toute écriture sur le disque."
-      },
-      {
-        "title": "Cloisonnés par conception",
-        "text": "Un plugin de type data fournit du JSON et n'exécute rien. Un plugin de type process tourne sous son propre uid, avec son propre schéma de base de données. Il ne peut accéder ni aux tables d'un autre plugin, ni aux vôtres."
-      },
-      {
-        "title": "Intégrée à l'interface",
-        "text": "Les pages, entrées de menu et paramètres des plugins apparaissent à leur place, et respectent vos permissions comme tout le reste."
-      }
-    ],
-    "cta": "Lire la documentation des plugins"
+    "title": "Plugins"
   },
   "platforms": {
     "eyebrow": "Tous les appareils",

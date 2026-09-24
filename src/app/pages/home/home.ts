@@ -30,17 +30,7 @@ export class Home {
     { image: 'img/screenshots/player.webp', labelKey: 'tour.tabs.player', altKey: 'tour.alt.player' },
   ];
 
-  protected readonly appletvItems: TourItem[] = [
-    { image: 'img/tv/appletv-home.webp', labelKey: 'tour.tabs.home', altKey: 'tv.alt.appletvHome' },
-    { image: 'img/tv/appletv-library.webp', labelKey: 'tour.tabs.library', altKey: 'tv.alt.appletvLibrary' },
-    { image: 'img/tv/appletv-detail.webp', labelKey: 'tour.tabs.detail', altKey: 'tv.alt.appletvDetail' },
-    { image: 'img/tv/appletv-player.webp', labelKey: 'tour.tabs.player', altKey: 'tv.alt.appletvPlayer' },
-  ];
 
-  protected readonly tizenItems: TourItem[] = [
-    { image: 'img/tv/tizen-detail.webp', labelKey: 'tour.tabs.detail', altKey: 'tv.alt.tizenDetail' },
-    { image: 'img/tv/tizen-player.webp', labelKey: 'tour.tabs.player', altKey: 'tv.alt.tizenPlayer' },
-  ];
 
   protected readonly dockerDownloadLines = DOCKER_DOWNLOAD_LINES;
   protected readonly dockerDownload = DOCKER_DOWNLOAD_LINES.join('\n');

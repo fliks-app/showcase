@@ -75,37 +75,7 @@ html.reveal-enabled [data-reveal].is-visible {
   transform: none;
 }
 
-/* TV bezel: wraps a screenshot tour to read as a living-room set rather than a browser crop. */
-.tv-frame {
-  border-radius: 1.5rem;
-  padding: 0.65rem;
-  background: linear-gradient(160deg, #221f2c, #08070c);
-  box-shadow:
-    0 30px 60px -25px rgba(0, 0, 0, 0.7),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-.tv-frame__screen {
-  border-radius: 0.9rem;
-  overflow: hidden;
-  background: #000;
-}
-.tv-frame__stand {
-  width: 34%;
-  height: 0.65rem;
-  margin: 0 auto;
-  border-radius: 0 0 0.4rem 0.4rem;
-  background: linear-gradient(160deg, #221f2c, #08070c);
-}
-.tv-frame__foot {
-  width: 52%;
-  height: 0.4rem;
-  margin: 0 auto;
-  border-radius: 0.3rem;
-  background: #0c0a10;
-  box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.6);
-}
-
-/* Laptop bezel for the web/desktop screenshot, paired with .tv-frame under "every screen". */
+/* Laptop bezel for the hero screenshot. */
 .laptop-frame {
   border-radius: 1rem 1rem 0.4rem 0.4rem;
   padding: 0.6rem 0.6rem 0.35rem;

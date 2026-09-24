@@ -164,44 +164,8 @@
       "player": "The video player with subtitle and quality controls"
     }
   },
-  "tv": {
-    "eyebrow": "The big screen",
-    "title": "Built for the living room",
-    "subtitle": "Apps for Apple TV, Samsung, LG and Android TV, made for a remote and a couch.",
-    "appletv": "Apple TV",
-    "samsung": "Samsung TV",
-    "alt": {
-      "appletvHome": "Fliks home screen on Apple TV",
-      "appletvLibrary": "A movies list on Apple TV",
-      "appletvDetail": "A film detail page on Apple TV",
-      "appletvPlayer": "The Apple TV player",
-      "tizenDetail": "A film detail page on Samsung TV",
-      "tizenPlayer": "The Samsung TV player"
-    }
-  },
   "plugins": {
-    "eyebrow": "Modular by design",
-    "title": "Plugins",
-    "subtitle": "Fliks ships with no way to acquire media. You install what you want from Settings > Plugins.",
-    "items": [
-      {
-        "title": "The Download plugin",
-        "text": "Brings indexer search, download-client management and the grab pipeline. Install it and it appears in the interface."
-      },
-      {
-        "title": "Signed archives",
-        "text": "Every plugin archive is signed, and the signature is checked before anything is written to disk."
-      },
-      {
-        "title": "Isolated by design",
-        "text": "A data plugin ships JSON and executes nothing. A process plugin runs under its own uid, with its own database schema. It cannot reach another plugin's tables, or yours."
-      },
-      {
-        "title": "Part of the interface",
-        "text": "Plugin pages, menu entries and settings appear where they belong, and follow your permissions like everything else."
-      }
-    ],
-    "cta": "Read the plugin docs"
+    "title": "Plugins"
   },
   "platforms": {
     "eyebrow": "Every device",

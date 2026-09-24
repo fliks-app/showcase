@@ -14,13 +14,7 @@
     }
   </div>
 
-  <div
-    class="relative mt-6 overflow-hidden bg-base-300"
-    [class.rounded-2xl]="!frameless()"
-    [class.border]="!frameless()"
-    [class.border-white/10]="!frameless()"
-    [class.shadow-2xl]="!frameless()"
-  >
+  <div class="relative mt-6 overflow-hidden rounded-2xl border border-white/10 bg-base-300 shadow-2xl">
     @for (item of items(); track item.image; let i = $index) {
       @if (active() === i) {
         <img [src]="item.image" width="1600" [height]="height()" [alt]="item.altKey | translate" class="h-auto w-full" loading="lazy" />
