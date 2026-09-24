@@ -128,3 +128,14 @@ section[id] {
     opacity: 0.3;
   }
 }
+
+/* A translucent band that fades in and out, so the page glow shows through without hard edges. */
+.band {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    color-mix(in oklab, var(--color-base-200) 55%, transparent) 20%,
+    color-mix(in oklab, var(--color-base-200) 55%, transparent) 80%,
+    transparent
+  );
+}
