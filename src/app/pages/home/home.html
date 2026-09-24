@@ -1,0 +1,242 @@
+<!-- Hero -->
+<section class="relative overflow-hidden">
+  <div
+    class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,color-mix(in_oklab,var(--color-primary)_18%,transparent),transparent)]"
+  ></div>
+
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 pt-14 pb-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-8 lg:pt-20">
+    <div>
+      <span class="badge badge-outline badge-lg border-primary/40 text-primary">{{ 'hero.eyebrow' | translate }}</span>
+      <h1 class="mt-5 text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+        {{ 'hero.title' | translate }}
+      </h1>
+      <p class="mt-5 max-w-xl text-lg text-base-content/70">{{ 'hero.subtitle' | translate }}</p>
+      <p class="mt-3 max-w-xl text-sm text-base-content/60">{{ 'hero.note' | translate }}</p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a routerLink="/" fragment="get-started" class="btn btn-primary btn-lg">{{ 'hero.ctaPrimary' | translate }}</a>
+        <a href="https://github.com/fliks-app/fliks" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+          {{ 'hero.ctaSecondary' | translate }}
+        </a>
+      </div>
+
+      <dl class="mt-10 grid grid-cols-3 gap-4 border-t border-base-300 pt-6 sm:max-w-md">
+        <div>
+          <dt class="text-xs text-base-content/60">{{ 'stats.license' | translate }}</dt>
+          <dd class="text-lg font-semibold">{{ 'stats.licenseValue' | translate }}</dd>
+        </div>
+        <div>
+          <dt class="text-xs text-base-content/60">{{ 'stats.clients' | translate }}</dt>
+          <dd class="text-lg font-semibold">{{ 'stats.clientsValue' | translate }}</dd>
+        </div>
+        <div>
+          <dt class="text-xs text-base-content/60">{{ 'stats.hosting' | translate }}</dt>
+          <dd class="text-lg font-semibold">{{ 'stats.hostingValue' | translate }}</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="relative">
+      <div class="overflow-hidden rounded-2xl border border-base-300 bg-base-200 shadow-2xl">
+        <img src="img/screenshots/collage.webp" [alt]="'hero.imageAlt' | translate" class="h-auto w-full" fetchpriority="high" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{{ 'features.title' | translate }}</h2>
+    <p class="mt-3 text-base-content/70">{{ 'features.subtitle' | translate }}</p>
+  </div>
+
+  <div class="mt-12 grid gap-6 lg:grid-cols-2">
+    @for (group of featureGroups; track group) {
+      <div class="rounded-2xl border border-base-300 bg-base-200/40 p-6 sm:p-8">
+        <h3 class="text-lg font-semibold">{{ 'features.groups.' + group + '.title' | translate }}</h3>
+        <ul class="mt-4 space-y-4">
+          @for (item of ('features.groups.' + group + '.items' | translate); track item.title) {
+            <li>
+              <p class="font-medium">{{ item.title }}</p>
+              <p class="mt-0.5 text-sm text-base-content/70">{{ item.text }}</p>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- Tour -->
+<section id="tour" class="bg-base-200/40 py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{{ 'tour.title' | translate }}</h2>
+      <p class="mt-3 text-base-content/70">{{ 'tour.subtitle' | translate }}</p>
+    </div>
+    <div class="mt-10">
+      <app-screenshot-tour [items]="tourItems" />
+    </div>
+  </div>
+</section>
+
+<!-- TV -->
+<section id="tv" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{{ 'tv.title' | translate }}</h2>
+    <p class="mt-3 text-base-content/70">{{ 'tv.subtitle' | translate }}</p>
+  </div>
+
+  <div class="mt-10 grid gap-12 lg:grid-cols-2">
+    <div>
+      <h3 class="mb-4 text-center text-sm font-semibold text-base-content/60 uppercase tracking-wide">
+        {{ 'tv.appletv' | translate }}
+      </h3>
+      <app-screenshot-tour [items]="appletvItems" />
+    </div>
+    <div>
+      <h3 class="mb-4 text-center text-sm font-semibold text-base-content/60 uppercase tracking-wide">
+        {{ 'tv.samsung' | translate }}
+      </h3>
+      <app-screenshot-tour [items]="tizenItems" />
+    </div>
+  </div>
+</section>
+
+<!-- Plugins -->
+<section class="bg-base-200/40 py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{{ 'plugins.title' | translate }}</h2>
+      <p class="mt-3 text-base-content/70">{{ 'plugins.subtitle' | translate }}</p>
+    </div>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2">
+      @for (item of ('plugins.items' | translate); track item.title) {
+        <div class="rounded-2xl border border-base-300 bg-base-100 p-6">
+          <p class="font-medium">{{ item.title }}</p>
+          <p class="mt-1 text-sm text-base-content/70">{{ item.text }}</p>
+        </div>
+      }
+    </div>
+
+    <div class="mt-8 text-center">
+      <a href="https://fliks-app.github.io/docs/plugins/overview" target="_blank" rel="noopener" class="link link-primary text-sm font-medium">
+        {{ 'plugins.cta' | translate }} →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Platforms teaser -->
+<section id="platforms" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{{ 'platforms.title' | translate }}</h2>
+    <p class="mt-3 text-base-content/70">{{ 'platforms.subtitle' | translate }}</p>
+  </div>
+
+  <div class="mt-10 grid gap-6 sm:grid-cols-2">
+    <div class="rounded-2xl border border-base-300 p-6">
+      <h3 class="font-semibold">{{ 'platforms.server' | translate }}</h3>
+      <p class="mt-2 text-sm text-base-content/70">{{ 'platforms.serverList' | translate }}</p>
+    </div>
+    <div class="rounded-2xl border border-base-300 p-6">
+      <h3 class="font-semibold">{{ 'platforms.clients' | translate }}</h3>
+      <p class="mt-2 text-sm text-base-content/70">{{ 'platforms.clientList' | translate }}</p>
+    </div>
+  </div>
+
+  <div class="mt-8 text-center">
+    <a routerLink="/download" class="btn btn-outline">{{ 'platforms.viewAll' | translate }}</a>
+  </div>
+</section>
+
+<!-- Get started -->
+<section id="get-started" class="bg-base-200/40 py-20">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{{ 'getStarted.title' | translate }}</h2>
+      <p class="mt-3 text-base-content/70">{{ 'getStarted.subtitle' | translate }}</p>
+    </div>
+
+    <div class="mt-10 rounded-2xl border border-base-300 bg-base-100 p-6 sm:p-8">
+      <h3 class="font-semibold">{{ 'getStarted.dockerTitle' | translate }}</h3>
+
+      <p class="mt-4 text-sm text-base-content/70">{{ 'getStarted.dockerStep1' | translate }}</p>
+      <div class="mockup-code relative mt-2 text-sm">
+        @for (line of dockerDownloadLines; track line) {
+          <pre data-prefix="$"><code>{{ line }}</code></pre>
+        }
+        <button type="button" class="btn btn-xs absolute top-2 right-2" (click)="copy(dockerDownload, 'download')">
+          {{ (copiedBlock() === 'download' ? 'getStarted.copied' : 'getStarted.copy') | translate }}
+        </button>
+      </div>
+
+      <p class="mt-6 text-sm text-base-content/70">{{ 'getStarted.dockerStep2' | translate }}</p>
+      <div class="mockup-code relative mt-2 text-sm">
+        <pre data-prefix="$"><code>{{ dockerUp }}</code></pre>
+        <button type="button" class="btn btn-xs absolute top-2 right-2" (click)="copy(dockerUp, 'up')">
+          {{ (copiedBlock() === 'up' ? 'getStarted.copied' : 'getStarted.copy') | translate }}
+        </button>
+      </div>
+
+      <p class="mt-6 text-sm text-base-content/60">{{ 'getStarted.otherWays' | translate }}</p>
+
+      <div class="mt-6 flex flex-wrap gap-3 border-t border-base-300 pt-6 text-sm">
+        <a href="https://fliks-app.github.io/docs/getting-started/quick-start" target="_blank" rel="noopener" class="link link-primary">
+          {{ 'getStarted.linkQuickStart' | translate }}
+        </a>
+        <a href="https://fliks-app.github.io/docs/install/docker" target="_blank" rel="noopener" class="link link-primary">
+          {{ 'getStarted.linkDocker' | translate }}
+        </a>
+        <a href="https://fliks-app.github.io/docs/plugins/overview" target="_blank" rel="noopener" class="link link-primary">
+          {{ 'getStarted.linkPlugins' | translate }}
+        </a>
+        <a href="https://github.com/fliks-app/fliks/releases" target="_blank" rel="noopener" class="link link-primary">
+          {{ 'getStarted.linkReleases' | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why self-hosted -->
+<section class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{{ 'why.title' | translate }}</h2>
+    <p class="mt-3 text-base-content/70">{{ 'why.subtitle' | translate }}</p>
+  </div>
+
+  <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    @for (item of ('why.items' | translate); track item.title) {
+      <div class="rounded-2xl border border-base-300 p-6">
+        <p class="font-medium">{{ item.title }}</p>
+        <p class="mt-1 text-sm text-base-content/70">{{ item.text }}</p>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- Community -->
+<section class="bg-base-200/40 py-20">
+  <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{{ 'community.title' | translate }}</h2>
+    <p class="mt-3 text-base-content/70">{{ 'community.subtitle' | translate }}</p>
+
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <a href="https://github.com/fliks-app/fliks" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+        {{ 'community.github' | translate }}
+      </a>
+      <a href="https://github.com/fliks-app/fliks/issues" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+        {{ 'community.issues' | translate }}
+      </a>
+      <a href="https://github.com/fliks-app/fliks/releases" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+        {{ 'community.releases' | translate }}
+      </a>
+      <a href="https://github.com/fliks-app/fliks/blob/main/LICENSE" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+        {{ 'community.license' | translate }}
+      </a>
+    </div>
+  </div>
+</section>

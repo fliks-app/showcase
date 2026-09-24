@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "title": "Fliks: your personal video collection, on every screen",
+    "description": "Fliks is a self-hosted media server and streaming app for your own video collection. Free, open source, AGPL-3.0."
+  },
+  "nav": {
+    "features": "Features",
+    "tour": "Tour",
+    "platforms": "Platforms",
+    "getStarted": "Get started",
+    "docs": "Docs",
+    "github": "GitHub",
+    "download": "Download",
+    "language": "Language",
+    "theme": "Toggle theme",
+    "menu": "Menu"
+  },
+  "hero": {
+    "eyebrow": "Self-hosted media server",
+    "title": "Your personal video collection, on every screen in the house.",
+    "subtitle": "Point Fliks at the folders where your videos live and it does the rest: covers, descriptions, cast, seasons and episodes, laid out like the streaming apps you already use. Except the library is yours.",
+    "note": "Self-hosted. The server runs on your machine. No account to create, no subscription, nothing leaves the house.",
+    "ctaPrimary": "Get started",
+    "ctaSecondary": "View on GitHub",
+    "imageAlt": "The Fliks home page, a library, discovery and a film page"
+  },
+  "stats": {
+    "license": "License",
+    "licenseValue": "AGPL-3.0",
+    "clients": "Client platforms",
+    "clientsValue": "10",
+    "hosting": "Hosting",
+    "hostingValue": "Your hardware"
+  },
+  "features": {
+    "title": "What you get",
+    "subtitle": "A full streaming service for the household, running on hardware you already own.",
+    "groups": {
+      "watching": {
+        "title": "Watching",
+        "items": [
+          {
+            "title": "Adaptive streaming",
+            "text": "Quality follows the bandwidth without a hiccup, or lock a bitrate by hand when you would rather decide."
+          },
+          {
+            "title": "Resume anywhere",
+            "text": "Start on the phone, finish on the TV. The position syncs live."
+          },
+          {
+            "title": "Every track, switchable mid-playback",
+            "text": "All embedded audio renditions, all embedded and external subtitles, with your choice remembered per show."
+          },
+          {
+            "title": "Subtitles found for you",
+            "text": "A video with none? Fliks goes looking on the usual subtitle sites and picks the one that actually matches your copy."
+          },
+          {
+            "title": "Out of sync, fixed in one click",
+            "text": "Fliks listens to the dialogue and slides the subtitles back onto it. No hunting for the right offset."
+          },
+          {
+            "title": "Translated on demand",
+            "text": "Nothing available in your language? Translate a track you do have. The result is saved next to the video, so it is only done once."
+          },
+          {
+            "title": "Skip intro, next episode, chapter markers",
+            "text": "Thumbnail previews when you scrub, and a rewind buffer for live TV."
+          },
+          {
+            "title": "Live TV",
+            "text": "Add an M3U playlist or an Xtream account. Channels line up next to your library, with a program guide."
+          }
+        ]
+      },
+      "browsing": {
+        "title": "Browsing",
+        "items": [
+          {
+            "title": "Several libraries side by side",
+            "text": "Movies, shows, home videos, kids. Each pointed at its own folder."
+          },
+          {
+            "title": "Search across all of them",
+            "text": "Filter and sort by status, date added, rating, runtime."
+          },
+          {
+            "title": "Rich metadata",
+            "text": "Posters, fanart, genres, cast and crew. Every person and every genre is its own page."
+          },
+          {
+            "title": "Home rows",
+            "text": "Continue Watching, Recently Added, and recommendations weighted by what you actually watched."
+          },
+          {
+            "title": "Spoiler protection",
+            "text": "Blurs the synopsis, the thumbnail and the title of anything you have not watched yet, until you reveal it."
+          }
+        ]
+      },
+      "sharing": {
+        "title": "Sharing with the household",
+        "items": [
+          {
+            "title": "Recommend something to someone",
+            "text": "Pick a film or a season and send it to another user. It shows up on their home page with your name on it."
+          },
+          {
+            "title": "Playlists",
+            "text": "Your own running order, drag to reorder, autoplay from one item to the next."
+          },
+          {
+            "title": "Shared playlists",
+            "text": "Invite other users as viewer, editor or admin and build one together."
+          },
+          {
+            "title": "Downloads that keep themselves current",
+            "text": "What you have not watched is downloaded to the device, what you have watched is removed. Nothing to think about before a trip."
+          }
+        ]
+      },
+      "running": {
+        "title": "Running it",
+        "items": [
+          {
+            "title": "Multi-user",
+            "text": "Each with their own history, progress and preferences."
+          },
+          {
+            "title": "Pairing by QR code",
+            "text": "A short code or a scan, and the TV picks up the session from your phone."
+          },
+          {
+            "title": "Live transcode dashboard",
+            "text": "For admins: who is watching what, at which quality, on which hardware path, and why."
+          },
+          {
+            "title": "Images cached locally",
+            "text": "No hotlinking to external services while you browse."
+          }
+        ]
+      }
+    }
+  },
+  "tour": {
+    "title": "See it in action",
+    "subtitle": "A quick look at the interface, on the web client.",
+    "tabs": {
+      "home": "Home",
+      "library": "Library",
+      "detail": "Film page",
+      "discover": "Discover",
+      "player": "Player"
+    },
+    "alt": {
+      "home": "The Fliks home page with continue watching and recommendation rows",
+      "library": "A library grid of posters",
+      "detail": "A film detail page with synopsis, cast and crew",
+      "discover": "The discover page for finding something new to watch",
+      "player": "The video player with subtitle and quality controls"
+    }
+  },
+  "tv": {
+    "title": "Built for the living room",
+    "subtitle": "A native app on Apple TV and Samsung TV, made for a remote and a couch.",
+    "appletv": "Apple TV",
+    "samsung": "Samsung TV",
+    "alt": {
+      "appletvHome": "Fliks home screen on Apple TV",
+      "appletvLibrary": "A movies list on Apple TV",
+      "appletvDetail": "A film detail page on Apple TV",
+      "appletvPlayer": "The Apple TV player",
+      "tizenHome": "Fliks home screen on Samsung TV",
+      "tizenDetail": "A film detail page on Samsung TV",
+      "tizenPlayer": "The Samsung TV player",
+      "tizenLibrary": "A library grid on Samsung TV"
+    }
+  },
+  "plugins": {
+    "title": "Plugins",
+    "subtitle": "Fliks ships with no way to acquire media. You install what you want from Settings > Plugins.",
+    "items": [
+      {
+        "title": "The Download plugin",
+        "text": "Brings indexer search, download-client management and the grab pipeline. Install it and it appears in the interface."
+      },
+      {
+        "title": "Signed archives",
+        "text": "Every plugin archive is signed, and the signature is checked before anything is written to disk."
+      },
+      {
+        "title": "Isolated by design",
+        "text": "A data plugin ships JSON and executes nothing. A process plugin runs under its own uid, with its own database schema. It cannot reach another plugin's tables, or yours."
+      },
+      {
+        "title": "Part of the interface",
+        "text": "Plugin pages, menu entries and settings appear where they belong, and follow your permissions like everything else."
+      }
+    ],
+    "cta": "Read the plugin docs"
+  },
+  "platforms": {
+    "title": "Everywhere you watch",
+    "subtitle": "Start a film on your phone and finish it on the TV. Your place follows you.",
+    "viewAll": "See every platform",
+    "server": "Server",
+    "clients": "Clients",
+    "serverList": "Docker, a Windows tray app, a macOS menu-bar app, or from source.",
+    "clientList": "Web, iOS, Android, Android TV, Apple TV, Samsung TV, LG TV, desktop, Chromecast, Nintendo Switch."
+  },
+  "getStarted": {
+    "title": "Get started in 2 minutes",
+    "subtitle": "All you need is a folder with your videos.",
+    "dockerTitle": "Docker, the recommended way",
+    "dockerStep1": "Download the compose file",
+    "dockerStep2": "Set your media path and passwords, then start it",
+    "copy": "Copy",
+    "copied": "Copied",
+    "otherWays": "Windows and macOS installers are on the releases page.",
+    "linkQuickStart": "Quick start guide",
+    "linkDocker": "Docker install guide",
+    "linkPlugins": "Plugins overview",
+    "linkReleases": "Latest release"
+  },
+  "why": {
+    "title": "Why self-hosted",
+    "subtitle": "The library is yours, and so is the machine it runs on.",
+    "items": [
+      {
+        "title": "Your data stays home",
+        "text": "No account to create, no subscription, nothing leaves the house."
+      },
+      {
+        "title": "Free and open source",
+        "text": "AGPL-3.0-or-later. Read the code, change it, run a modified version."
+      },
+      {
+        "title": "No catalog to lose",
+        "text": "Your files, your metadata, your history. Nothing disappears because a license expired."
+      },
+      {
+        "title": "Runs on what you have",
+        "text": "A NAS, a spare machine, a home server. Hardware transcoding when the machine offers it."
+      }
+    ]
+  },
+  "community": {
+    "title": "Open source, built in the open",
+    "subtitle": "Every change, every release and every discussion happens on GitHub.",
+    "github": "Source code",
+    "issues": "Report an issue",
+    "releases": "Release notes",
+    "license": "License"
+  },
+  "footer": {
+    "tagline": "Your personal video collection, on every screen in the house.",
+    "product": "Product",
+    "resources": "Resources",
+    "project": "Project",
+    "rights": "Fliks is free and open source software, licensed AGPL-3.0-or-later."
+  },
+  "download": {
+    "metaTitle": "Download Fliks: every platform",
+    "eyebrow": "Download",
+    "title": "Fliks on every screen",
+    "subtitle": "The same account, the same history, the same library, wherever you install it.",
+    "clientsTitle": "Clients",
+    "clientTable": {
+      "client": "Client",
+      "source": "Where to get it",
+      "minimum": "Minimum",
+      "notes": "Notes"
+    },
+    "clients": [
+      { "name": "Web / PWA", "source": "Your browser, at the server URL", "minimum": "Any current browser", "notes": "Installable to the home screen" },
+      { "name": "iOS / iPadOS", "source": "App Store", "minimum": "iOS 16.6", "notes": "" },
+      { "name": "Android", "source": "Play Store", "minimum": "Android 6 (API 23)", "notes": "Phone and tablet" },
+      { "name": "Android TV", "source": "Play Store", "minimum": "Android 6", "notes": "" },
+      { "name": "Samsung TV (Tizen)", "source": "Sideload for now", "minimum": "Tizen 5.5", "notes": "Works fully, not yet on the Samsung app store" },
+      { "name": "LG TV (webOS)", "source": "LG Content Store", "minimum": "webOS 7.0", "notes": "Approved, on the store" },
+      { "name": "Desktop", "source": "Release assets", "minimum": "macOS: Apple Silicon", "notes": "Windows .exe, macOS .dmg, Linux .deb / AppImage" },
+      { "name": "Chromecast", "source": "Built in, cast from any client", "minimum": "Any", "notes": "Custom receiver, same player engine" },
+      { "name": "Apple TV", "source": "App Store", "minimum": "tvOS 17", "notes": "Native SwiftUI app" },
+      { "name": "Nintendo Switch", "source": "Build the .nro from switchfliks", "minimum": "Homebrew-enabled console", "notes": "Beta, native client with hardware decode" }
+    ],
+    "serverTitle": "Server",
+    "serverTable": {
+      "how": "How you run it",
+      "platforms": "Platforms",
+      "hardware": "Hardware transcoding",
+      "shipsWith": "Ships with"
+    },
+    "servers": [
+      { "how": "Docker (recommended)", "platforms": "linux/amd64, linux/arm64", "hardware": "Intel QSV, VAAPI, NVIDIA NVENC, AMD", "shipsWith": "Backend, web client, FFmpeg" },
+      { "how": "Windows, tray app, NSIS installer", "platforms": "Windows x64", "hardware": "Intel QSV, AMD AMF, NVIDIA NVENC, auto-detected", "shipsWith": "Everything, no dependencies" },
+      { "how": "macOS, menu-bar app, .dmg", "platforms": "macOS 13 Ventura+, Apple Silicon", "hardware": "VideoToolbox", "shipsWith": "Everything, no dependencies" },
+      { "how": "From source", "platforms": "Anywhere Node runs", "hardware": "Whatever your FFmpeg exposes", "shipsWith": "" }
+    ],
+    "encodersTitle": "Encoders",
+    "encodersSubtitle": "Which hardware path is available depends on the machine, not on Fliks. It probes at startup and falls back to CPU when nothing else answers.",
+    "encodersHeaders": { "codec": "Codec", "cpu": "CPU", "qsv": "Intel QSV", "vaapi": "VAAPI", "nvenc": "NVIDIA NVENC", "amf": "AMD AMF", "vt": "VideoToolbox" },
+    "encodersRows": [
+      { "codec": "H.264", "cpu": "✓", "qsv": "✓", "vaapi": "✓", "nvenc": "✓", "amf": "✓", "vt": "✓" },
+      { "codec": "HEVC", "cpu": "✓", "qsv": "✓", "vaapi": "✓", "nvenc": "✓", "amf": "✓", "vt": "✓" },
+      { "codec": "AV1", "cpu": "✓", "qsv": "✓", "vaapi": "✓", "nvenc": "✓", "amf": "✓", "vt": "-" }
+    ],
+    "encodersNote": "HDR10, HLG and Dolby Vision are tone-mapped to SDR when the receiving device cannot render them.",
+    "getFliks": "Get the server",
+    "getFliksText": "Grab the latest release, or follow the Docker quick start.",
+    "linkReleases": "Latest release",
+    "linkQuickStart": "Quick start guide"
+  }
+}

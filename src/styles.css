@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Same rounding as the Fliks app, so the site reads as the same product. */
+:root, [data-theme] {
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 0.5rem;
+}
+
+.tab {
+  border-radius: var(--radius-box, 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Anchor targets sit under the sticky navbar without hiding under it on jump. */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+/* The Fliks wordmark ships as two SVGs (dark text / light text) rather than one
+   recolored by CSS, so swap which one is in the flow per theme. */
+:root[data-theme='dark'] .logo-light-only {
+  display: none;
+}
+:root[data-theme='light'] .logo-dark-only {
+  display: none;
+}
+

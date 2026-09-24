@@ -1,0 +1,24 @@
+<div>
+  <div role="tablist" class="tabs tabs-boxed mx-auto w-fit max-w-full flex-wrap justify-center bg-base-200/70">
+    @for (item of items(); track item.image; let i = $index) {
+      <button
+        role="tab"
+        type="button"
+        class="tab"
+        [class.tab-active]="active() === i"
+        [attr.aria-selected]="active() === i"
+        (click)="active.set(i)"
+      >
+        {{ item.labelKey | translate }}
+      </button>
+    }
+  </div>
+
+  <div class="relative mt-6 overflow-hidden rounded-2xl border border-base-300 bg-base-200 shadow-xl">
+    @for (item of items(); track item.image; let i = $index) {
+      @if (active() === i) {
+        <img [src]="item.image" [alt]="item.altKey | translate" class="h-auto w-full" loading="lazy" />
+      }
+    }
+  </div>
+</div>
