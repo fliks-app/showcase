@@ -1,15 +1,46 @@
 @import "tailwindcss";
-@plugin "daisyui";
 
-/* Same rounding as the Fliks app, so the site reads as the same product. */
-:root, [data-theme] {
-  --radius-selector: 1rem;
-  --radius-field: 1rem;
-  --radius-box: 0.5rem;
+/* A single dark cinematic theme: this site leans on full-bleed backdrops and heavy
+   gradient scrims that only read correctly against a near-black page, so a light
+   variant would fight the whole premise rather than just needing a palette swap. */
+@plugin "daisyui" {
+  themes: fliks --default;
 }
 
-.tab {
-  border-radius: var(--radius-box, 0.5rem);
+@plugin "daisyui/theme" {
+  name: "fliks";
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: #0a0910;
+  --color-base-200: #131019;
+  --color-base-300: #1e1a28;
+  --color-base-content: #f2f0f6;
+  --color-primary: #a63f90;
+  --color-primary-content: #fdf1fa;
+  --color-secondary: #2ea2dc;
+  --color-secondary-content: #051520;
+  --color-accent: #b54b96;
+  --color-accent-content: #fdf1fa;
+  --color-neutral: #171420;
+  --color-neutral-content: #d6d2e0;
+  --color-info: #4db8e8;
+  --color-info-content: #051520;
+  --color-success: #34c78a;
+  --color-success-content: #04180f;
+  --color-warning: #eab308;
+  --color-warning-content: #201700;
+  --color-error: #f0466e;
+  --color-error-content: #200309;
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.25rem;
+  --border: 1px;
+}
+
+@theme {
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -27,15 +58,143 @@ section[id] {
   scroll-margin-top: 4.5rem;
 }
 
-/* The Fliks wordmark ships as two SVGs (dark text / light text) rather than one
-   recolored by CSS, so swap which one is in the flow per theme. */
-:root[data-theme='dark'] .logo-light-only {
-  display: none;
+.tab {
+  border-radius: var(--radius-box, 1.25rem);
 }
-:root[data-theme='light'] .logo-dark-only {
+
+/* Scrollbar-free horizontal rows: the row component supplies its own prev/next
+   buttons, so the native scrollbar is only visual noise. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
+/* Hero backdrop: a blurred, darkened screenshot with a slow Ken Burns drift.
+   Scaled up first so the blur never exposes an edge as it pans. */
+@keyframes kenburns {
+  0% {
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.18) translate3d(-1.5%, -1%, 0);
+  }
+}
+.hero-backdrop-img {
+  animation: kenburns 28s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-backdrop-img {
+    animation: none;
+  }
+}
+
+/* Scrim stack: fades the backdrop to the page color on every edge so headline
+   text stays legible regardless of what the screenshot behind it looks like. */
+.hero-scrim {
+  background:
+    linear-gradient(to top, var(--color-base-100) 0%, transparent 42%),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-base-100) 80%, transparent) 0%, transparent 32%),
+    linear-gradient(to right, color-mix(in oklab, var(--color-base-100) 88%, transparent) 0%, transparent 62%),
+    radial-gradient(120% 90% at 28% 18%, transparent 35%, color-mix(in oklab, var(--color-base-100) 55%, transparent) 100%);
+}
+
+/* Scroll-reveal: hidden only once JS confirms it's running and motion is allowed,
+   so prerendered/no-JS/reduced-motion visitors always get the fully visible page. */
+html.reveal-enabled [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+html.reveal-enabled [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* TV bezel: wraps a screenshot tour to read as a living-room set rather than a browser crop. */
+.tv-frame {
+  border-radius: 1.5rem;
+  padding: 0.65rem;
+  background: linear-gradient(160deg, #221f2c, #08070c);
+  box-shadow:
+    0 30px 60px -25px rgba(0, 0, 0, 0.7),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+.tv-frame__screen {
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: #000;
+}
+.tv-frame__stand {
+  width: 34%;
+  height: 0.65rem;
+  margin: 0 auto;
+  border-radius: 0 0 0.4rem 0.4rem;
+  background: linear-gradient(160deg, #221f2c, #08070c);
+}
+.tv-frame__foot {
+  width: 52%;
+  height: 0.4rem;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  background: #0c0a10;
+  box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.6);
+}
+
+/* Laptop bezel for the web/desktop screenshot, paired with .tv-frame under "every screen". */
+.laptop-frame {
+  border-radius: 1rem 1rem 0.4rem 0.4rem;
+  padding: 0.6rem 0.6rem 0.35rem;
+  background: linear-gradient(160deg, #221f2c, #08070c);
+  box-shadow:
+    0 30px 60px -25px rgba(0, 0, 0, 0.7),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+.laptop-frame__screen {
+  border-radius: 0.55rem;
+  overflow: hidden;
+  background: #000;
+}
+.laptop-frame__base {
+  height: 0.85rem;
+  margin-top: 0.35rem;
+  border-radius: 0 0 0.6rem 0.6rem;
+  background: linear-gradient(180deg, #2a2734, #0c0a10);
+  position: relative;
+}
+.laptop-frame__base::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 18%;
+  height: 0.2rem;
+  transform: translateX(-50%);
+  border-radius: 0 0 0.3rem 0.3rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Feature-tile art: five brand gradients cycled across rows, derived from the logo's
+   blue-to-magenta ramp so abstract tiles still read as "Fliks", not stock icons. */
+.art-1 {
+  background: linear-gradient(135deg, #1c365c, #3c2f72);
+}
+.art-2 {
+  background: linear-gradient(135deg, #3c2f72, #6d2f86);
+}
+.art-3 {
+  background: linear-gradient(135deg, #6d2f86, #9c3f92);
+}
+.art-4 {
+  background: linear-gradient(135deg, #9c3f92, #b54b96);
+}
+.art-5 {
+  background: linear-gradient(135deg, #234b7a, #6d2f86);
+}
 
 /* Below sm, a wide table reads as one card per row instead of scrolling sideways. */
 @media (width < 40rem) {

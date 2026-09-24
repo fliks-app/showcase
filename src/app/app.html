@@ -1,6 +1,9 @@
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-field focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-content">
+  {{ 'common.skipToContent' | translate }}
+</a>
 <div class="flex min-h-screen flex-col bg-base-100 text-base-content">
   <app-navbar />
-  <main class="flex-1">
+  <main id="main" class="flex-1">
     <router-outlet />
   </main>
   <app-footer />

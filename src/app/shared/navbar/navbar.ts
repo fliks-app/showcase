@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { ThemeService } from '../../core/theme.service';
 import { SUPPORTED_LANGS, SupportedLang } from '../../core/translate-loader';
 
 @Component({
@@ -10,7 +9,6 @@ import { SUPPORTED_LANGS, SupportedLang } from '../../core/translate-loader';
   templateUrl: './navbar.html',
 })
 export class Navbar {
-  protected readonly theme = inject(ThemeService);
   protected readonly translate = inject(TranslateService);
   protected readonly langs = SUPPORTED_LANGS;
 

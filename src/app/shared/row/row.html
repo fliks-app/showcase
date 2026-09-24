@@ -1,0 +1,36 @@
+<div data-reveal>
+  <div class="mb-4 flex items-end justify-between gap-4">
+    <div>
+      <h3 class="font-display text-2xl tracking-wide sm:text-3xl">{{ title() }}</h3>
+      @if (subtitle()) {
+        <p class="mt-1 text-sm text-base-content/60">{{ subtitle() }}</p>
+      }
+    </div>
+    <div class="hidden shrink-0 gap-2 lg:flex">
+      <button
+        type="button"
+        class="btn btn-circle btn-sm border-white/10 bg-base-200 hover:bg-base-300"
+        (click)="scrollBy(-1)"
+        [attr.aria-label]="'common.scrollLeft' | translate"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-4" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <button
+        type="button"
+        class="btn btn-circle btn-sm border-white/10 bg-base-200 hover:bg-base-300"
+        (click)="scrollBy(1)"
+        [attr.aria-label]="'common.scrollRight' | translate"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-4" aria-hidden="true">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div #scroller class="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-2">
+    <ng-content />
+  </div>
+</div>

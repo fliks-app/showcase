@@ -1,13 +1,14 @@
 import { Component, PLATFORM_ID, afterNextRender, effect, inject } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Navbar } from './shared/navbar/navbar';
 import { Footer } from './shared/footer/footer';
 import { DEFAULT_LANG, SUPPORTED_LANGS, SupportedLang } from './core/translate-loader';
+import { initScrollReveal } from './core/scroll-reveal';
 
 @Component({
-  imports: [RouterOutlet, Navbar, Footer],
+  imports: [RouterOutlet, Navbar, Footer, TranslatePipe],
   selector: 'app-root',
   templateUrl: './app.html',
 })
@@ -36,6 +37,7 @@ export class App {
       if (detected && (SUPPORTED_LANGS as readonly string[]).includes(detected)) {
         translate.use(detected as SupportedLang);
       }
+      initScrollReveal();
     });
   }
 }

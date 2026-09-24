@@ -3,6 +3,11 @@
     "title": "Fliks: your personal video collection, on every screen",
     "description": "Fliks is a self-hosted media server and streaming app for your own video collection. Free, open source, AGPL-3.0."
   },
+  "common": {
+    "skipToContent": "Skip to content",
+    "scrollLeft": "Previous",
+    "scrollRight": "Next"
+  },
   "nav": {
     "features": "Features",
     "tour": "Tour",
@@ -12,7 +17,6 @@
     "github": "GitHub",
     "download": "Download",
     "language": "Language",
-    "theme": "Toggle theme",
     "menu": "Menu",
     "langs": {
       "en": "English",
@@ -21,11 +25,10 @@
   },
   "hero": {
     "eyebrow": "Self-hosted media server",
-    "title": "Your personal video collection, on every screen in the house.",
-    "subtitle": "Point Fliks at the folders where your videos live and it does the rest: covers, descriptions, cast, seasons and episodes, laid out like the streaming apps you already use. Except the library is yours.",
+    "title": "Your collection. Every screen. Your rules.",
+    "subtitle": "Point Fliks at the folders where your films and shows live, and it takes it from there: covers, synopses, cast, seasons and episodes, laid out just like the streaming apps you already binge on. Except this library is entirely yours.",
     "ctaPrimary": "Get started",
-    "ctaSecondary": "View on GitHub",
-    "imageAlt": "The Fliks home page, a library, discovery and a film page"
+    "ctaSecondary": "View on GitHub"
   },
   "stats": {
     "license": "License",
@@ -36,8 +39,9 @@
     "hostingValue": "Your hardware"
   },
   "features": {
-    "title": "What you get",
-    "subtitle": "A full streaming service for the household, running on hardware you already own.",
+    "eyebrow": "The lineup",
+    "title": "Everything a streaming night needs",
+    "subtitle": "A full streaming service for the whole household, running on hardware you already own.",
     "groups": {
       "watching": {
         "title": "Watching",
@@ -123,7 +127,7 @@
         ]
       },
       "running": {
-        "title": "Running it",
+        "title": "Running the show",
         "items": [
           {
             "title": "Multi-user",
@@ -146,6 +150,7 @@
     }
   },
   "tour": {
+    "eyebrow": "Sneak peek",
     "title": "See it in action",
     "subtitle": "A quick look at the interface, on the web client.",
     "tabs": {
@@ -162,6 +167,7 @@
     }
   },
   "tv": {
+    "eyebrow": "The big screen",
     "title": "Built for the living room",
     "subtitle": "Apps for Apple TV, Samsung, LG and Android TV, made for a remote and a couch.",
     "appletv": "Apple TV",
@@ -176,6 +182,7 @@
     }
   },
   "plugins": {
+    "eyebrow": "Modular by design",
     "title": "Plugins",
     "subtitle": "Fliks ships with no way to acquire media. You install what you want from Settings > Plugins.",
     "items": [
@@ -199,6 +206,7 @@
     "cta": "Read the plugin docs"
   },
   "platforms": {
+    "eyebrow": "Every device",
     "title": "Everywhere you watch",
     "subtitle": "Start a film on your phone and finish it on the TV. Your place follows you.",
     "viewAll": "See every platform",
@@ -208,6 +216,7 @@
     "clientList": "Web, iOS, Android, Android TV, Apple TV, Samsung TV, LG TV, desktop, Chromecast, Nintendo Switch."
   },
   "getStarted": {
+    "eyebrow": "Two-minute setup",
     "title": "Get started in 2 minutes",
     "subtitle": "All you need is a folder with your videos.",
     "dockerTitle": "Docker, the recommended way",
@@ -222,6 +231,7 @@
     "linkReleases": "Latest release"
   },
   "why": {
+    "eyebrow": "Home-grown",
     "title": "Why self-hosted",
     "subtitle": "The library is yours, and so is the machine it runs on.",
     "items": [
@@ -244,6 +254,7 @@
     ]
   },
   "community": {
+    "eyebrow": "Open source",
     "title": "Open source, built in the open",
     "subtitle": "Every change, every release and every discussion happens on GitHub.",
     "github": "Source code",

@@ -1,7 +1,12 @@
 {
   "meta": {
-    "title": "Fliks : votre collection vidéo personnelle, sur tous les écrans",
+    "title": "Fliks : votre collection vidéo personnelle, sur tous les écrans",
     "description": "Fliks est un serveur multimédia et de streaming auto-hébergé pour votre propre collection vidéo. Gratuit, open source, AGPL-3.0."
+  },
+  "common": {
+    "skipToContent": "Aller au contenu principal",
+    "scrollLeft": "Précédent",
+    "scrollRight": "Suivant"
   },
   "nav": {
     "features": "Fonctionnalités",
@@ -12,7 +17,6 @@
     "github": "GitHub",
     "download": "Télécharger",
     "language": "Langue",
-    "theme": "Changer de thème",
     "menu": "Menu",
     "langs": {
       "en": "English",
@@ -21,11 +25,10 @@
   },
   "hero": {
     "eyebrow": "Serveur multimédia auto-hébergé",
-    "title": "Votre collection vidéo personnelle, sur tous les écrans de la maison.",
-    "subtitle": "Indiquez à Fliks les dossiers où sont rangées vos vidéos, il s'occupe du reste : jaquettes, résumés, casting, saisons et épisodes, présentés comme sur les plateformes de streaming que vous connaissez. Sauf que la bibliothèque vous appartient.",
+    "title": "Votre collection. Tous les écrans. Vos règles.",
+    "subtitle": "Indiquez à Fliks les dossiers où vivent vos films et séries, il s'occupe du reste : jaquettes, résumés, casting, saisons et épisodes, présentés comme sur les plateformes de streaming que vous regardez déjà. Sauf que cette bibliothèque est entièrement la vôtre.",
     "ctaPrimary": "Démarrer",
-    "ctaSecondary": "Voir sur GitHub",
-    "imageAlt": "La page d'accueil de Fliks, une bibliothèque, la découverte et une page de film"
+    "ctaSecondary": "Voir sur GitHub"
   },
   "stats": {
     "license": "Licence",
@@ -36,8 +39,9 @@
     "hostingValue": "Votre matériel"
   },
   "features": {
-    "title": "Tout ce qu'il faut",
-    "subtitle": "Un vrai service de streaming pour toute la maison, sur du matériel que vous avez déjà.",
+    "eyebrow": "Au programme",
+    "title": "Tout ce qu'on attend d'une soirée streaming",
+    "subtitle": "Un vrai service de streaming pour toute la maison, sur le matériel que vous possédez déjà.",
     "groups": {
       "watching": {
         "title": "Visionnage",
@@ -56,7 +60,7 @@
           },
           {
             "title": "Des sous-titres trouvés pour vous",
-            "text": "Une vidéo sans sous-titres ? Fliks les cherche sur les sites habituels et choisit ceux qui correspondent vraiment à votre version."
+            "text": "Une vidéo sans sous-titres ? Fliks les cherche sur les sites habituels et choisit ceux qui correspondent vraiment à votre version."
           },
           {
             "title": "Sous-titres décalés, recalés en un clic",
@@ -64,7 +68,7 @@
           },
           {
             "title": "Traduction à la demande",
-            "text": "Rien dans votre langue ? Faites traduire une piste existante. Le résultat est enregistré à côté de la vidéo : la traduction n'est faite qu'une fois."
+            "text": "Rien dans votre langue ? Faites traduire une piste existante. Le résultat est enregistré à côté de la vidéo : la traduction n'est faite qu'une fois."
           },
           {
             "title": "Passer le générique, épisode suivant, chapitres",
@@ -118,12 +122,12 @@
           },
           {
             "title": "Des téléchargements toujours à jour",
-            "text": "Passez une playlist en automatique : ce que vous n'avez pas vu est téléchargé sur l'appareil, ce que vous avez vu est supprimé. Rien à préparer avant de partir."
+            "text": "Passez une playlist en automatique : ce que vous n'avez pas vu est téléchargé sur l'appareil, ce que vous avez vu est supprimé. Rien à préparer avant de partir."
           }
         ]
       },
       "running": {
-        "title": "Administration",
+        "title": "Aux commandes",
         "items": [
           {
             "title": "Multi-utilisateurs",
@@ -135,7 +139,7 @@
           },
           {
             "title": "Suivi des transcodages en direct",
-            "text": "Pour les administrateurs : qui regarde quoi, en quelle qualité, avec quel encodeur, et pourquoi."
+            "text": "Pour les administrateurs : qui regarde quoi, en quelle qualité, avec quel encodeur, et pourquoi."
           },
           {
             "title": "Images mises en cache localement",
@@ -146,6 +150,7 @@
     }
   },
   "tour": {
+    "eyebrow": "Coup d'œil",
     "title": "En images",
     "subtitle": "Un rapide tour de l'interface, dans le client web.",
     "tabs": {
@@ -162,6 +167,7 @@
     }
   },
   "tv": {
+    "eyebrow": "Grand écran",
     "title": "Pensé pour le salon",
     "subtitle": "Des applications pour Apple TV, Samsung, LG et Android TV, faites pour la télécommande et le canapé.",
     "appletv": "Apple TV",
@@ -176,6 +182,7 @@
     }
   },
   "plugins": {
+    "eyebrow": "Modulable par nature",
     "title": "Plugins",
     "subtitle": "Fliks ne fournit aucun moyen de se procurer des médias. Vous installez ce que vous voulez depuis Paramètres > Plugins.",
     "items": [
@@ -199,6 +206,7 @@
     "cta": "Lire la documentation des plugins"
   },
   "platforms": {
+    "eyebrow": "Tous les appareils",
     "title": "Partout où vous regardez",
     "subtitle": "Commencez un film sur votre téléphone et terminez-le sur la TV. Votre position vous suit.",
     "viewAll": "Voir toutes les plateformes",
@@ -208,6 +216,7 @@
     "clientList": "Web, iOS, Android, Android TV, Apple TV, Samsung TV, LG TV, ordinateur, Chromecast, Nintendo Switch."
   },
   "getStarted": {
+    "eyebrow": "Installation express",
     "title": "Prêt en deux minutes",
     "subtitle": "Il vous faut seulement un dossier avec vos vidéos.",
     "dockerTitle": "Docker, la méthode recommandée",
@@ -222,6 +231,7 @@
     "linkReleases": "Dernière version"
   },
   "why": {
+    "eyebrow": "Fait maison",
     "title": "Pourquoi l'auto-hébergement",
     "subtitle": "La bibliothèque est à vous, et la machine qui la fait tourner aussi.",
     "items": [
@@ -244,8 +254,9 @@
     ]
   },
   "community": {
+    "eyebrow": "Open source",
     "title": "Open source, développé au grand jour",
-    "subtitle": "Tout se passe sur GitHub : chaque modification, chaque version, chaque discussion.",
+    "subtitle": "Tout se passe sur GitHub : chaque modification, chaque version, chaque discussion.",
     "github": "Code source",
     "issues": "Signaler un problème",
     "releases": "Notes de version",
@@ -259,7 +270,7 @@
     "rights": "Fliks est un logiciel libre et open source, sous licence AGPL-3.0-or-later."
   },
   "download": {
-    "metaTitle": "Télécharger Fliks : toutes les plateformes",
+    "metaTitle": "Télécharger Fliks : toutes les plateformes",
     "eyebrow": "Télécharger",
     "title": "Fliks sur tous les écrans",
     "subtitle": "Le même compte, le même historique, la même bibliothèque, où que vous l'installiez.",
@@ -310,7 +321,7 @@
       {
         "name": "Ordinateur",
         "source": "Fichiers joints aux versions",
-        "minimum": "macOS : Apple Silicon",
+        "minimum": "macOS : Apple Silicon",
         "notes": "Windows .exe, macOS .dmg, Linux .deb / AppImage"
       },
       {

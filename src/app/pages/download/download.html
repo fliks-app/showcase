@@ -1,16 +1,21 @@
 <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-  <div class="mx-auto max-w-2xl text-center">
-    <span class="badge badge-outline badge-lg border-primary/40 text-primary">{{ 'download.eyebrow' | translate }}</span>
-    <h1 class="mt-5 text-3xl font-bold tracking-tight sm:text-4xl">{{ 'download.title' | translate }}</h1>
+  <div class="mx-auto max-w-2xl text-center" data-reveal>
+    <span
+      class="badge badge-lg gap-2 border-white/15 bg-white/5 py-4 text-xs font-semibold tracking-wide text-base-content/90 uppercase backdrop-blur"
+    >
+      <span class="size-1.5 rounded-full bg-primary"></span>
+      {{ 'download.eyebrow' | translate }}
+    </span>
+    <h1 class="font-display mt-5 text-5xl tracking-wide sm:text-6xl">{{ 'download.title' | translate }}</h1>
     <p class="mt-3 text-base-content/70">{{ 'download.subtitle' | translate }}</p>
   </div>
 
   <!-- Clients -->
-  <h2 class="mt-16 text-xl font-semibold">{{ 'download.clientsTitle' | translate }}</h2>
-  <div class="mt-4 overflow-x-auto rounded-2xl border border-base-300">
+  <h2 class="font-display mt-16 text-2xl tracking-wide" data-reveal>{{ 'download.clientsTitle' | translate }}</h2>
+  <div class="mt-4 overflow-x-auto rounded-box border border-white/10" data-reveal>
     <table class="table stack-sm">
       <thead>
-        <tr>
+        <tr class="border-white/10">
           <th>{{ 'download.clientTable.client' | translate }}</th>
           <th>{{ 'download.clientTable.source' | translate }}</th>
           <th>{{ 'download.clientTable.minimum' | translate }}</th>
@@ -19,11 +24,11 @@
       </thead>
       <tbody>
         @for (client of ('download.clients' | translate); track client.name) {
-          <tr>
+          <tr class="border-white/10">
             <td class="font-medium sm:whitespace-nowrap">{{ client.name }}</td>
             <td>{{ client.source }}</td>
             <td class="sm:whitespace-nowrap">{{ client.minimum }}</td>
-            <td class="text-base-content/70">{{ client.notes }}</td>
+            <td class="text-base-content/60">{{ client.notes }}</td>
           </tr>
         }
       </tbody>
@@ -31,11 +36,11 @@
   </div>
 
   <!-- Server -->
-  <h2 class="mt-16 text-xl font-semibold">{{ 'download.serverTitle' | translate }}</h2>
-  <div class="mt-4 overflow-x-auto rounded-2xl border border-base-300">
+  <h2 class="font-display mt-16 text-2xl tracking-wide" data-reveal>{{ 'download.serverTitle' | translate }}</h2>
+  <div class="mt-4 overflow-x-auto rounded-box border border-white/10" data-reveal>
     <table class="table stack-sm">
       <thead>
-        <tr>
+        <tr class="border-white/10">
           <th>{{ 'download.serverTable.how' | translate }}</th>
           <th>{{ 'download.serverTable.platforms' | translate }}</th>
           <th>{{ 'download.serverTable.hardware' | translate }}</th>
@@ -44,11 +49,11 @@
       </thead>
       <tbody>
         @for (server of ('download.servers' | translate); track server.how) {
-          <tr>
+          <tr class="border-white/10">
             <td class="font-medium">{{ server.how }}</td>
             <td>{{ server.platforms }}</td>
             <td>{{ server.hardware }}</td>
-            <td class="text-base-content/70">{{ server.shipsWith }}</td>
+            <td class="text-base-content/60">{{ server.shipsWith }}</td>
           </tr>
         }
       </tbody>
@@ -56,13 +61,13 @@
   </div>
 
   <!-- Encoders -->
-  <h2 class="mt-16 text-xl font-semibold">{{ 'download.encodersTitle' | translate }}</h2>
-  <p class="mt-2 max-w-2xl text-sm text-base-content/70">{{ 'download.encodersSubtitle' | translate }}</p>
-  @let headers = ('download.encodersHeaders' | translate);
-  <div class="mt-4 overflow-x-auto rounded-2xl border border-base-300">
+  <h2 class="font-display mt-16 text-2xl tracking-wide" data-reveal>{{ 'download.encodersTitle' | translate }}</h2>
+  <p class="mt-2 max-w-2xl text-sm text-base-content/60" data-reveal>{{ 'download.encodersSubtitle' | translate }}</p>
+  @let headers = 'download.encodersHeaders' | translate;
+  <div class="mt-4 overflow-x-auto rounded-box border border-white/10" data-reveal>
     <table class="table text-center">
       <thead>
-        <tr>
+        <tr class="border-white/10">
           <th class="text-left">{{ headers.codec }}</th>
           <th>{{ headers.cpu }}</th>
           <th>{{ headers.qsv }}</th>
@@ -74,30 +79,39 @@
       </thead>
       <tbody>
         @for (row of ('download.encodersRows' | translate); track row.codec) {
-          <tr>
+          <tr class="border-white/10">
             <td class="text-left font-medium">{{ row.codec }}</td>
-            <td>{{ row.cpu }}</td>
-            <td>{{ row.qsv }}</td>
-            <td>{{ row.vaapi }}</td>
-            <td>{{ row.nvenc }}</td>
-            <td>{{ row.amf }}</td>
-            <td>{{ row.vt }}</td>
+            <td class="font-display text-lg text-primary">{{ row.cpu }}</td>
+            <td class="font-display text-lg text-primary">{{ row.qsv }}</td>
+            <td class="font-display text-lg text-primary">{{ row.vaapi }}</td>
+            <td class="font-display text-lg text-primary">{{ row.nvenc }}</td>
+            <td class="font-display text-lg text-primary">{{ row.amf }}</td>
+            <td class="font-display text-lg text-primary">{{ row.vt }}</td>
           </tr>
         }
       </tbody>
     </table>
   </div>
-  <p class="mt-3 text-sm text-base-content/70">{{ 'download.encodersNote' | translate }}</p>
+  <p class="mt-3 text-sm text-base-content/60" data-reveal>{{ 'download.encodersNote' | translate }}</p>
 
   <!-- CTA -->
-  <div class="mt-16 rounded-2xl border border-base-300 bg-base-200/40 p-8 text-center">
-    <h2 class="text-xl font-semibold">{{ 'download.getFliks' | translate }}</h2>
+  <div class="relative mt-16 overflow-hidden rounded-box border border-white/10 bg-base-200/40 p-8 text-center" data-reveal>
+    <div
+      class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,color-mix(in_oklab,var(--color-primary)_18%,transparent),transparent)]"
+      aria-hidden="true"
+    ></div>
+    <h2 class="font-display text-2xl tracking-wide">{{ 'download.getFliks' | translate }}</h2>
     <p class="mt-2 text-base-content/70">{{ 'download.getFliksText' | translate }}</p>
     <div class="mt-6 flex flex-wrap justify-center gap-3">
-      <a href="https://github.com/fliks-app/fliks/releases" target="_blank" rel="noopener" class="btn btn-primary">
+      <a href="https://github.com/fliks-app/fliks/releases" target="_blank" rel="noopener" class="btn btn-primary rounded-full px-8">
         {{ 'download.linkReleases' | translate }}
       </a>
-      <a href="https://fliks-app.github.io/docs/getting-started/quick-start" target="_blank" rel="noopener" class="btn btn-outline">
+      <a
+        href="https://fliks-app.github.io/docs/getting-started/quick-start"
+        target="_blank"
+        rel="noopener"
+        class="btn rounded-full border-white/20 bg-white/5 hover:bg-white/10"
+      >
         {{ 'download.linkQuickStart' | translate }}
       </a>
     </div>
