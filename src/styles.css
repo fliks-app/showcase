@@ -129,13 +129,7 @@ section[id] {
   }
 }
 
-/* A translucent band that fades in and out, so the page glow shows through without hard edges. */
+/* A translucent band: sets sections apart while the page glow still shows through. */
 .band {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    color-mix(in oklab, var(--color-base-200) 55%, transparent) 20%,
-    color-mix(in oklab, var(--color-base-200) 55%, transparent) 80%,
-    transparent
-  );
+  background: color-mix(in oklab, var(--color-base-200) 55%, transparent);
 }
