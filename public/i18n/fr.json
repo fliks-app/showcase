@@ -26,7 +26,8 @@
     "title": "Votre collection de vidéos, sur tous les écrans de la maison.",
     "subtitle": "Indiquez à Fliks les dossiers où vivent vos films et séries. Il s'occupe du reste : jaquettes, résumés, casting, saisons et épisodes, présentés comme dans les applications que vous utilisez déjà. Cette bibliothèque est entièrement la vôtre.",
     "ctaPrimary": "Démarrer",
-    "ctaSecondary": "Voir sur GitHub"
+    "ctaSecondary": "Voir sur GitHub",
+    "imageAlt": "La page d'accueil, une bibliothèque, la découverte et une page de film"
   },
   "stats": {
     "license": "Licence",

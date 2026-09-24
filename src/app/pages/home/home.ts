@@ -20,7 +20,6 @@ export class Home {
     setPageTitle('meta.title');
   }
 
-  protected readonly heroImage = 'img/screenshots/detail.webp';
   protected readonly featureGroups = ['watching', 'browsing', 'sharing', 'running'] as const;
 
   protected readonly tourItems: TourItem[] = [
