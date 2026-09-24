@@ -43,106 +43,98 @@
     "subtitle": "Un vrai service de streaming pour toute la maison, sur le matériel que vous possédez déjà.",
     "groups": {
       "watching": {
-        "title": "Visionnage",
+        "title": "Regarder",
         "items": [
           {
-            "title": "Streaming adaptatif",
-            "text": "La qualité s'adapte à la connexion sans coupure, ou fixez vous-même le débit si vous préférez."
-          },
-          {
-            "title": "Reprise partout",
-            "text": "Commencez sur le téléphone, finissez sur la TV. La position se synchronise en direct."
-          },
-          {
-            "title": "Changez de piste en pleine lecture",
-            "text": "Toutes les pistes audio du fichier, tous les sous-titres intégrés ou externes. Votre choix est mémorisé pour chaque série."
-          },
-          {
             "title": "Des sous-titres trouvés pour vous",
-            "text": "Une vidéo sans sous-titres ? Fliks les cherche sur les sites habituels et choisit ceux qui correspondent vraiment à votre version."
+            "text": "Une vidéo sans sous-titres ? Fliks cherche sur les sites habituels et choisit ceux qui correspondent à votre fichier."
+          },
+          {
+            "title": "Traduits par l'IA",
+            "text": "Rien dans votre langue ? Traduisez une piste existante avec Gemini, n'importe quel modèle compatible OpenAI ou LibreTranslate. Enregistrée à côté de la vidéo, faite une seule fois."
           },
           {
             "title": "Sous-titres décalés, recalés en un clic",
-            "text": "Fliks écoute les dialogues et cale les sous-titres dessus. Plus besoin de chercher le bon décalage."
+            "text": "Fliks écoute les dialogues et recale les sous-titres dessus. Plus besoin de chercher le bon décalage."
           },
           {
-            "title": "Traduction à la demande",
-            "text": "Rien dans votre langue ? Faites traduire une piste existante. Le résultat est enregistré à côté de la vidéo : la traduction n'est faite qu'une fois."
+            "title": "Sous-titres image rendus lisibles",
+            "text": "Les sous-titres image des DVD et Blu-ray sont lus par OCR et convertis en texte, que vous pouvez styliser et traduire."
           },
           {
-            "title": "Passer le générique, épisode suivant, chapitres",
-            "text": "Des aperçus en vignette quand vous avancez dans la vidéo, et un retour en arrière sur la TV en direct."
+            "title": "Le HDR sur tous les écrans",
+            "text": "HDR10, HLG et Dolby Vision sont convertis en SDR quand l'écran ne sait pas les afficher : l'image n'est jamais délavée."
           },
           {
-            "title": "TV en direct",
-            "text": "Ajoutez votre playlist IPTV. Les chaînes se rangent à côté de votre bibliothèque, avec un guide des programmes."
+            "title": "Une TV en direct que vous pouvez mettre en pause",
+            "text": "Ajoutez votre playlist IPTV : un guide des programmes à côté de votre bibliothèque, avec pause et retour arrière en direct."
           }
         ]
       },
       "browsing": {
-        "title": "Navigation",
+        "title": "Parcourir",
         "items": [
           {
-            "title": "Plusieurs bibliothèques côte à côte",
-            "text": "Films, séries, vidéos de famille, enfants. Chacune avec son propre dossier."
+            "title": "Protection contre les spoilers",
+            "text": "Floute le résumé et la miniature de ce que vous n'avez pas encore vu, et masque les titres d'épisodes qui en disent trop."
           },
           {
-            "title": "Une recherche commune à toutes",
-            "text": "Filtrez et triez par statut, date d'ajout, note, durée."
+            "title": "Des suggestions selon ce que vous regardez",
+            "text": "Des recommandations pondérées par ce que vous avez vraiment regardé, pas par les tendances."
+          },
+          {
+            "title": "Calendrier des sorties",
+            "text": "Les prochains épisodes et sorties de ce que vous suivez, dans un seul calendrier."
           },
           {
             "title": "Métadonnées riches",
-            "text": "Affiches, images de fond, genres, casting et équipe technique. Chaque personne a sa page, avec tout ce qu'elle a fait dans vos bibliothèques."
-          },
-          {
-            "title": "Les rangées de l'accueil",
-            "text": "Reprendre la lecture, ajouts récents, et des recommandations fondées sur ce que vous regardez vraiment."
-          },
-          {
-            "title": "Protection contre les spoilers",
-            "text": "Floute le résumé et la vignette de ce que vous n'avez pas encore vu, et masque les titres d'épisode qui en disent trop."
+            "text": "Affiches, casting et équipe. Chaque personne a sa page avec ses œuvres présentes dans vos bibliothèques."
           }
         ]
       },
       "sharing": {
-        "title": "Partage en famille",
+        "title": "La maison et ses écrans",
         "items": [
           {
-            "title": "Recommander à quelqu'un",
-            "text": "Choisissez un film ou une saison et envoyez-le à un autre utilisateur. Il s'affiche sur sa page d'accueil, avec votre nom."
-          },
-          {
-            "title": "Playlists",
-            "text": "Votre propre ordre de lecture, réorganisable par glisser-déposer, avec enchaînement automatique."
-          },
-          {
-            "title": "Playlists partagées",
-            "text": "Invitez d'autres utilisateurs comme lecteur, éditeur ou administrateur, et composez-la ensemble."
-          },
-          {
-            "title": "Des téléchargements toujours à jour",
-            "text": "Passez une playlist en automatique : ce que vous n'avez pas vu est téléchargé sur l'appareil, ce que vous avez vu est supprimé. Rien à préparer avant de partir."
-          }
-        ]
-      },
-      "running": {
-        "title": "Aux commandes",
-        "items": [
-          {
-            "title": "Multi-utilisateurs",
-            "text": "Chacun avec son propre historique, sa progression et ses préférences."
+            "title": "Télécommande",
+            "text": "Choisissez un autre appareil depuis votre téléphone et lancez la lecture dessus. Pause, avance, sous-titres ou qualité depuis le canapé, entre deux applis Fliks."
           },
           {
             "title": "Quick Connect pour les TV",
             "text": "Choisissez votre profil sur la TV, validez depuis votre téléphone. Aucun mot de passe à taper à la télécommande."
           },
           {
-            "title": "Suivi des transcodages en direct",
-            "text": "Pour les administrateurs : qui regarde quoi, en quelle qualité, avec quel encodeur, et pourquoi."
+            "title": "Recommander à quelqu'un",
+            "text": "Envoyez un film ou une saison à un autre utilisateur. Il apparaît sur sa page d'accueil, avec votre nom."
           },
           {
-            "title": "Images mises en cache localement",
-            "text": "Aucune requête vers des services externes pendant que vous naviguez."
+            "title": "Playlists partagées",
+            "text": "Invitez d'autres utilisateurs en lecteur, éditeur ou administrateur et construisez-la ensemble."
+          },
+          {
+            "title": "Des téléchargements toujours à jour",
+            "text": "Passez une playlist en automatique : ce que vous n'avez pas vu est téléchargé, ce que vous avez vu est supprimé. Prêt avant un voyage."
+          }
+        ]
+      },
+      "running": {
+        "title": "En coulisses",
+        "items": [
+          {
+            "title": "Transcodage matériel",
+            "text": "Intel QSV, VAAPI, NVIDIA NVENC, AMD AMF et Apple VideoToolbox, détectés au démarrage, avec repli sur le processeur."
+          },
+          {
+            "title": "Suivi des transcodages en direct",
+            "text": "Qui regarde quoi, en quelle qualité, par quel chemin matériel, et pourquoi un transcodage a été nécessaire."
+          },
+          {
+            "title": "Demandes avec approbation automatique",
+            "text": "Les membres du foyer demandent des titres ; les règles que vous fixez approuvent ceux en qui vous avez confiance."
+          },
+          {
+            "title": "Plugins signés et isolés",
+            "text": "Ajoutez ce dont vous avez besoin depuis le catalogue. Les archives sont signées, et le code d'un plugin tourne dans son propre processus."
           }
         ]
       }

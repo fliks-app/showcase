@@ -46,36 +46,28 @@
         "title": "Watching",
         "items": [
           {
-            "title": "Adaptive streaming",
-            "text": "Quality follows the bandwidth without a hiccup, or lock a bitrate by hand when you would rather decide."
-          },
-          {
-            "title": "Resume anywhere",
-            "text": "Start on the phone, finish on the TV. The position syncs live."
-          },
-          {
-            "title": "Every track, switchable mid-playback",
-            "text": "All embedded audio renditions, all embedded and external subtitles, with your choice remembered per show."
-          },
-          {
             "title": "Subtitles found for you",
-            "text": "A video with none? Fliks goes looking on the usual subtitle sites and picks the one that actually matches your copy."
+            "text": "A video with none? Fliks searches the usual subtitle sites and picks the one that matches your copy."
+          },
+          {
+            "title": "Translated by AI",
+            "text": "No track in your language? Translate one you have with Gemini, any OpenAI-compatible model or LibreTranslate. Saved next to the video, done once."
           },
           {
             "title": "Out of sync, fixed in one click",
             "text": "Fliks listens to the dialogue and slides the subtitles back onto it. No hunting for the right offset."
           },
           {
-            "title": "Translated on demand",
-            "text": "Nothing available in your language? Translate a track you do have. The result is saved next to the video, so it is only done once."
+            "title": "Image subtitles made readable",
+            "text": "DVD and Blu-ray picture subtitles are read by OCR and turned into text you can restyle and translate."
           },
           {
-            "title": "Skip intro, next episode, chapter markers",
-            "text": "Thumbnail previews when you scrub, and a rewind buffer for live TV."
+            "title": "HDR on any screen",
+            "text": "HDR10, HLG and Dolby Vision are tone-mapped to SDR when the screen cannot show them, so the picture never looks washed out."
           },
           {
-            "title": "Live TV",
-            "text": "Add your IPTV playlist. Channels line up next to your library, with a program guide."
+            "title": "Live TV you can pause",
+            "text": "Bring your IPTV playlist: a program guide next to your library, with pause and rewind on live channels."
           }
         ]
       },
@@ -83,37 +75,37 @@
         "title": "Browsing",
         "items": [
           {
-            "title": "Several libraries side by side",
-            "text": "Movies, shows, home videos, kids. Each pointed at its own folder."
+            "title": "Spoiler protection",
+            "text": "Blurs the synopsis and thumbnail of anything you have not watched yet, and hides episode titles that give the plot away."
           },
           {
-            "title": "Search across all of them",
-            "text": "Filter and sort by status, date added, rating, runtime."
+            "title": "Suggestions from what you watch",
+            "text": "Recommendations weighted by what you actually watched, not by what is trending."
+          },
+          {
+            "title": "Release calendar",
+            "text": "Upcoming episodes and releases for what you follow, on one calendar."
           },
           {
             "title": "Rich metadata",
-            "text": "Posters, fanart, genres, cast and crew. Every person gets a page listing their work in your libraries."
-          },
-          {
-            "title": "Home rows",
-            "text": "Continue Watching, Recently Added, and recommendations weighted by what you actually watched."
-          },
-          {
-            "title": "Spoiler protection",
-            "text": "Blurs the synopsis and thumbnail of anything you have not watched yet, and hides episode titles that give the plot away."
+            "text": "Posters, cast and crew. Every person gets a page listing their work in your libraries."
           }
         ]
       },
       "sharing": {
-        "title": "Sharing with the household",
+        "title": "The household and its screens",
         "items": [
           {
-            "title": "Recommend something to someone",
-            "text": "Pick a film or a season and send it to another user. It shows up on their home page with your name on it."
+            "title": "Remote control",
+            "text": "Pick another device from your phone and play there. Pause, seek, switch subtitles or quality from the couch, between any two Fliks apps."
           },
           {
-            "title": "Playlists",
-            "text": "Your own running order, drag to reorder, autoplay from one item to the next."
+            "title": "Quick Connect for TVs",
+            "text": "Pick your profile on the TV, approve it from your phone. No password to type with a remote."
+          },
+          {
+            "title": "Recommend something to someone",
+            "text": "Send a film or a season to another user. It shows up on their home page with your name on it."
           },
           {
             "title": "Shared playlists",
@@ -121,7 +113,7 @@
           },
           {
             "title": "Downloads that keep themselves current",
-            "text": "Set a playlist to automatic: what you have not watched is downloaded to the device, what you have watched is removed. Nothing to think about before a trip."
+            "text": "Set a playlist to automatic: what you have not watched is downloaded, what you have watched is removed. Ready before a trip."
           }
         ]
       },
@@ -129,20 +121,20 @@
         "title": "Running the show",
         "items": [
           {
-            "title": "Multi-user",
-            "text": "Each with their own history, progress and preferences."
-          },
-          {
-            "title": "Quick Connect for TVs",
-            "text": "Pick your profile on the TV, approve it from your phone. No password to type with a remote."
+            "title": "Hardware transcoding",
+            "text": "Intel QSV, VAAPI, NVIDIA NVENC, AMD AMF and Apple VideoToolbox, detected at startup, with a CPU fallback."
           },
           {
             "title": "Live transcode dashboard",
-            "text": "For admins: who is watching what, at which quality, on which hardware path, and why."
+            "text": "Who is watching what, at which quality, on which hardware path, and why a transcode was needed."
           },
           {
-            "title": "Images cached locally",
-            "text": "No hotlinking to external services while you browse."
+            "title": "Requests with auto-approval",
+            "text": "Household members ask for titles; rules you set approve the ones you trust."
+          },
+          {
+            "title": "Signed, isolated plugins",
+            "text": "Add what you need from the plugin catalog. Archives are signed, and plugin code runs in its own process."
           }
         ]
       }

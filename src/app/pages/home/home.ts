@@ -43,12 +43,12 @@ export class Home {
   }
 
   protected readonly highlights = [
-    { group: 'watching', index: 0 },
     { group: 'watching', index: 1 },
-    { group: 'watching', index: 3 },
-    { group: 'watching', index: 7 },
-    { group: 'sharing', index: 3 },
-    { group: 'running', index: 1 },
+    { group: 'watching', index: 2 },
+    { group: 'sharing', index: 0 },
+    { group: 'browsing', index: 0 },
+    { group: 'sharing', index: 4 },
+    { group: 'watching', index: 4 },
   ];
 
   protected readonly tourItems: TourItem[] = [
