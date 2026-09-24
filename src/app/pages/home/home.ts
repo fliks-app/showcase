@@ -2,7 +2,6 @@ import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ScreenshotTour, TourItem } from '../../shared/screenshot-tour/screenshot-tour';
-import { Row } from '../../shared/row/row';
 import { setPageTitle } from '../../core/page-title';
 
 const DOCKER_DOWNLOAD_LINES = [
@@ -13,7 +12,7 @@ const DOCKER_UP = 'docker compose up -d';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, TranslatePipe, ScreenshotTour, Row],
+  imports: [RouterLink, TranslatePipe, ScreenshotTour],
   templateUrl: './home.html',
 })
 export class Home {
@@ -21,6 +20,7 @@ export class Home {
     setPageTitle('meta.title');
   }
 
+  protected readonly heroImage = 'img/screenshots/detail.webp';
   protected readonly featureGroups = ['watching', 'browsing', 'sharing', 'running'] as const;
 
   protected readonly tourItems: TourItem[] = [

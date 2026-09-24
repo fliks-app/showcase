@@ -1,0 +1,1 @@
+import{A as lu,D as g,L as x1,c as Ei}from"./main-U6327FZW.js";function l(r){let n=g(x1),s=g(lu);Ei(()=>n.setTitle(s.instant(r)))}export{l as t};

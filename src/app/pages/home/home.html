@@ -1,30 +1,20 @@
 <!-- Hero -->
-<section class="relative isolate flex min-h-[78vh] items-center overflow-hidden lg:min-h-[88vh]">
-  <div class="absolute inset-0 -z-10 overflow-hidden bg-base-100" aria-hidden="true">
-    <img
-      src="img/screenshots/home.webp"
-      alt=""
-      class="hero-backdrop-img h-full w-full object-cover object-top blur-[6px] brightness-[0.4] saturate-125"
-      fetchpriority="high"
-    />
-    <div class="hero-scrim absolute inset-0"></div>
-  </div>
-
-  <div class="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-    <div class="max-w-2xl">
+<section class="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+  <div class="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+    <div>
       <span
         class="badge badge-lg gap-2 border-white/15 bg-white/5 py-4 text-xs font-semibold tracking-wide text-base-content/90 uppercase backdrop-blur"
       >
         <span class="size-1.5 rounded-full bg-primary"></span>
         {{ 'hero.eyebrow' | translate }}
       </span>
-      <h1 class="font-display mt-5 text-6xl leading-[0.95] tracking-wide text-balance sm:text-7xl lg:text-8xl">
+      <h1 class="mt-5 text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
         {{ 'hero.title' | translate }}
       </h1>
       <p class="mt-6 max-w-xl text-lg text-base-content/75">{{ 'hero.subtitle' | translate }}</p>
 
       <div class="mt-8 flex flex-wrap items-center gap-3">
-        <a routerLink="/" fragment="get-started" class="btn btn-primary btn-lg gap-2 rounded-full px-8 shadow-lg shadow-primary/30">
+        <a routerLink="/" fragment="get-started" class="btn btn-primary btn-lg gap-2 rounded-full px-8">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4" aria-hidden="true">
             <path d="M8 5v14l11-7z" />
           </svg>
@@ -43,24 +33,34 @@
       <dl class="mt-12 grid grid-cols-3 gap-4 border-t border-white/10 pt-6 sm:max-w-md">
         <div>
           <dt class="text-xs tracking-wide text-base-content/50 uppercase">{{ 'stats.license' | translate }}</dt>
-          <dd class="font-display mt-1 text-xl tracking-wide">{{ 'stats.licenseValue' | translate }}</dd>
+          <dd class="mt-1 text-lg font-semibold">{{ 'stats.licenseValue' | translate }}</dd>
         </div>
         <div>
           <dt class="text-xs tracking-wide text-base-content/50 uppercase">{{ 'stats.clients' | translate }}</dt>
-          <dd class="font-display mt-1 text-xl tracking-wide">{{ 'stats.clientsValue' | translate }}</dd>
+          <dd class="mt-1 text-lg font-semibold">{{ 'stats.clientsValue' | translate }}</dd>
         </div>
         <div>
           <dt class="text-xs tracking-wide text-base-content/50 uppercase">{{ 'stats.hosting' | translate }}</dt>
-          <dd class="font-display mt-1 text-xl tracking-wide">{{ 'stats.hostingValue' | translate }}</dd>
+          <dd class="mt-1 text-lg font-semibold">{{ 'stats.hostingValue' | translate }}</dd>
         </div>
       </dl>
     </div>
-  </div>
 
-  <div class="absolute inset-x-0 bottom-6 hidden justify-center sm:flex" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="size-6 animate-bounce text-base-content/40">
-      <path d="M6 9l6 6 6-6" />
-    </svg>
+    <div data-reveal>
+      <div class="laptop-frame">
+        <div class="laptop-frame__screen">
+          <img
+            [src]="heroImage"
+            width="1600"
+            height="1000"
+            [alt]="'tour.alt.detail' | translate"
+            class="h-auto w-full"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="laptop-frame__base"></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -68,57 +68,63 @@
 <section id="features" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
   <div class="max-w-2xl" data-reveal>
     <span class="font-display text-sm tracking-widest text-primary uppercase">{{ 'features.eyebrow' | translate }}</span>
-    <h2 class="font-display mt-2 text-4xl tracking-wide sm:text-5xl">{{ 'features.title' | translate }}</h2>
+    <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{{ 'features.title' | translate }}</h2>
     <p class="mt-3 max-w-xl text-base-content/70">{{ 'features.subtitle' | translate }}</p>
   </div>
 
-  <div class="mt-12 flex flex-col gap-14">
+  <div class="mt-12 grid gap-x-12 gap-y-14 lg:grid-cols-2" data-reveal>
     @for (group of featureGroups; track group) {
-      <app-row [title]="('features.groups.' + group + '.title') | translate">
-        @for (item of ('features.groups.' + group + '.items' | translate); track item.title; let i = $index) {
-          <article class="w-64 shrink-0 snap-start sm:w-72">
-            <div
-              class="art-{{ (i % 5) + 1 }} relative aspect-video overflow-hidden rounded-xl ring-1 ring-white/10 transition-transform duration-300 hover:scale-[1.04] hover:ring-white/25"
-            >
-              <div class="absolute inset-0 flex items-center justify-center text-white/80">
-                @switch (group) {
-                  @case ('watching') {
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-9" aria-hidden="true">
-                      <circle cx="12" cy="12" r="9" />
-                      <path d="M10.5 8.5l5 3.5-5 3.5v-7Z" fill="currentColor" stroke="none" />
-                    </svg>
-                  }
-                  @case ('browsing') {
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-9" aria-hidden="true">
-                      <circle cx="11" cy="11" r="7" />
-                      <path d="M21 21l-4.3-4.3" />
-                    </svg>
-                  }
-                  @case ('sharing') {
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-9" aria-hidden="true">
-                      <circle cx="9" cy="8" r="3" />
-                      <path d="M2.5 20c0-3.3 2.9-6 6.5-6s6.5 2.7 6.5 6" />
-                      <path d="M16 8.3a3 3 0 0 1 0 5.9" />
-                      <path d="M21.5 20c0-2.5-1.8-4.7-4.5-5.6" />
-                    </svg>
-                  }
-                  @case ('running') {
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-9" aria-hidden="true">
-                      <rect x="3.5" y="4" width="17" height="6" rx="1.5" />
-                      <rect x="3.5" y="14" width="17" height="6" rx="1.5" />
-                      <path d="M7 7h.01M7 17h.01" stroke-width="2.2" stroke-linecap="round" />
-                    </svg>
-                  }
-                }
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            @switch (group) {
+              @case ('watching') {
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="size-5" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M10.5 8.5l5 3.5-5 3.5v-7Z" fill="currentColor" stroke="none" />
+                </svg>
+              }
+              @case ('browsing') {
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="size-5" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="M21 21l-4.3-4.3" />
+                </svg>
+              }
+              @case ('sharing') {
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="size-5" aria-hidden="true">
+                  <circle cx="9" cy="8" r="3" />
+                  <path d="M2.5 20c0-3.3 2.9-6 6.5-6s6.5 2.7 6.5 6" />
+                  <path d="M16 8.3a3 3 0 0 1 0 5.9" />
+                  <path d="M21.5 20c0-2.5-1.8-4.7-4.5-5.6" />
+                </svg>
+              }
+              @case ('running') {
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="size-5" aria-hidden="true">
+                  <rect x="3.5" y="4" width="17" height="6" rx="1.5" />
+                  <rect x="3.5" y="14" width="17" height="6" rx="1.5" />
+                  <path d="M7 7h.01M7 17h.01" stroke-width="2.2" stroke-linecap="round" />
+                </svg>
+              }
+            }
+          </span>
+          <h3 class="text-lg font-semibold tracking-tight">{{ ('features.groups.' + group + '.title') | translate }}</h3>
+        </div>
+
+        <ul class="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-2">
+          @for (item of ('features.groups.' + group + '.items' | translate); track item.title) {
+            <li class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="mt-0.5 size-5 shrink-0 text-primary/70" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M8.5 12.5l2.5 2.5 4.5-5" />
+              </svg>
+              <div>
+                <p class="font-medium">{{ item.title }}</p>
+                <p class="mt-0.5 text-sm text-base-content/60">{{ item.text }}</p>
               </div>
-              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent p-3 pt-10">
-                <p class="text-sm font-semibold text-white">{{ item.title }}</p>
-              </div>
-            </div>
-            <p class="mt-2 text-sm text-base-content/60">{{ item.text }}</p>
-          </article>
-        }
-      </app-row>
+            </li>
+          }
+        </ul>
+      </div>
     }
   </div>
 </section>
@@ -128,7 +134,7 @@
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
     <div class="max-w-2xl" data-reveal>
       <span class="font-display text-sm tracking-widest text-primary uppercase">{{ 'tour.eyebrow' | translate }}</span>
-      <h2 class="font-display mt-2 text-4xl tracking-wide sm:text-5xl">{{ 'tour.title' | translate }}</h2>
+      <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{{ 'tour.title' | translate }}</h2>
       <p class="mt-3 max-w-xl text-base-content/70">{{ 'tour.subtitle' | translate }}</p>
     </div>
     <div class="mt-10" data-reveal>
@@ -141,7 +147,7 @@
 <section id="tv" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
   <div class="max-w-2xl" data-reveal>
     <span class="font-display text-sm tracking-widest text-primary uppercase">{{ 'tv.eyebrow' | translate }}</span>
-    <h2 class="font-display mt-2 text-4xl tracking-wide sm:text-5xl">{{ 'tv.title' | translate }}</h2>
+    <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{{ 'tv.title' | translate }}</h2>
     <p class="mt-3 max-w-xl text-base-content/70">{{ 'tv.subtitle' | translate }}</p>
   </div>
 
@@ -178,16 +184,13 @@
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
     <div class="max-w-2xl" data-reveal>
       <span class="font-display text-sm tracking-widest text-primary uppercase">{{ 'plugins.eyebrow' | translate }}</span>
-      <h2 class="font-display mt-2 text-4xl tracking-wide sm:text-5xl">{{ 'plugins.title' | translate }}</h2>
+      <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{{ 'plugins.title' | translate }}</h2>
       <p class="mt-3 max-w-xl text-base-content/70">{{ 'plugins.subtitle' | translate }}</p>
     </div>
 
     <div class="mt-10 grid gap-4 sm:grid-cols-2" data-reveal>
-      @for (item of ('plugins.items' | translate); track item.title; let i = $index) {
-        <div
-          class="rounded-box border border-white/10 bg-base-100/60 p-6 transition-colors hover:border-white/20"
-          [style.transition-delay.ms]="i * 60"
-        >
+      @for (item of ('plugins.items' | translate); track item.title) {
+        <div class="rounded-box border border-white/10 bg-base-100/60 p-6">
           <p class="font-semibold">{{ item.title }}</p>
           <p class="mt-1 text-sm text-base-content/60">{{ item.text }}</p>
         </div>
@@ -212,32 +215,24 @@
 
 <!-- Platforms teaser -->
 <section id="platforms" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-  <div class="relative" data-reveal>
-    <span
-      aria-hidden="true"
-      class="font-display pointer-events-none absolute -top-10 -left-2 hidden text-[10rem] leading-none text-primary/10 select-none sm:block sm:text-[13rem]"
-    >
-      {{ 'stats.clientsValue' | translate }}
-    </span>
-    <div class="relative max-w-2xl">
-      <span class="font-display text-sm tracking-widest text-primary uppercase">{{ 'platforms.eyebrow' | translate }}</span>
-      <h2 class="font-display mt-2 text-4xl tracking-wide sm:text-5xl">{{ 'platforms.title' | translate }}</h2>
-      <p class="mt-3 max-w-xl text-base-content/70">{{ 'platforms.subtitle' | translate }}</p>
-    </div>
+  <div class="max-w-2xl" data-reveal>
+    <span class="font-display text-sm tracking-widest text-primary uppercase">{{ 'platforms.eyebrow' | translate }}</span>
+    <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{{ 'platforms.title' | translate }}</h2>
+    <p class="mt-3 max-w-xl text-base-content/70">{{ 'platforms.subtitle' | translate }}</p>
   </div>
 
-  <div class="relative mt-10 grid gap-6 sm:grid-cols-2" data-reveal>
+  <div class="mt-10 grid gap-6 sm:grid-cols-2" data-reveal>
     <div class="rounded-box border border-white/10 p-6">
-      <h3 class="font-display text-lg tracking-wide">{{ 'platforms.server' | translate }}</h3>
+      <h3 class="text-lg font-semibold tracking-tight">{{ 'platforms.server' | translate }}</h3>
       <p class="mt-2 text-sm text-base-content/70">{{ 'platforms.serverList' | translate }}</p>
     </div>
     <div class="rounded-box border border-white/10 p-6">
-      <h3 class="font-display text-lg tracking-wide">{{ 'platforms.clients' | translate }}</h3>
+      <h3 class="text-lg font-semibold tracking-tight">{{ 'platforms.clients' | translate }}</h3>
       <p class="mt-2 text-sm text-base-content/70">{{ 'platforms.clientList' | translate }}</p>
     </div>
   </div>
 
-  <div class="relative mt-8 text-center">
+  <div class="mt-8 text-center">
     <a routerLink="/download" class="btn btn-outline rounded-full border-white/20 hover:bg-white/10">{{ 'platforms.viewAll' | translate }}</a>
   </div>
 </section>
@@ -247,7 +242,7 @@
   <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
     <div class="text-center" data-reveal>
       <span class="font-display text-sm tracking-widest text-primary uppercase">{{ 'getStarted.eyebrow' | translate }}</span>
-      <h2 class="font-display mt-2 text-4xl tracking-wide sm:text-5xl">{{ 'getStarted.title' | translate }}</h2>
+      <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{{ 'getStarted.title' | translate }}</h2>
       <p class="mt-3 text-base-content/70">{{ 'getStarted.subtitle' | translate }}</p>
     </div>
 
@@ -257,7 +252,7 @@
       </h3>
 
       <div class="flex flex-col gap-4 p-6 sm:flex-row sm:items-start">
-        <span class="font-display shrink-0 text-4xl text-base-content/25 sm:text-5xl">01</span>
+        <span class="flex size-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm font-semibold">1</span>
         <div class="min-w-0 flex-1">
           <p class="font-semibold">{{ 'getStarted.dockerStep1' | translate }}</p>
           <div class="mockup-code relative mt-3 text-sm">
@@ -272,7 +267,7 @@
       </div>
 
       <div class="flex flex-col gap-4 p-6 sm:flex-row sm:items-start">
-        <span class="font-display shrink-0 text-4xl text-base-content/25 sm:text-5xl">02</span>
+        <span class="flex size-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm font-semibold">2</span>
         <div class="min-w-0 flex-1">
           <p class="font-semibold">{{ 'getStarted.dockerStep2' | translate }}</p>
           <div class="mockup-code relative mt-3 text-sm">
@@ -309,13 +304,13 @@
 <section class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
   <div class="max-w-2xl" data-reveal>
     <span class="font-display text-sm tracking-widest text-primary uppercase">{{ 'why.eyebrow' | translate }}</span>
-    <h2 class="font-display mt-2 text-4xl tracking-wide sm:text-5xl">{{ 'why.title' | translate }}</h2>
+    <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{{ 'why.title' | translate }}</h2>
     <p class="mt-3 max-w-xl text-base-content/70">{{ 'why.subtitle' | translate }}</p>
   </div>
 
   <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-reveal>
-    @for (item of ('why.items' | translate); track item.title; let i = $index) {
-      <div class="rounded-box border border-white/10 p-6 transition-colors hover:border-white/20" [style.transition-delay.ms]="i * 60">
+    @for (item of ('why.items' | translate); track item.title) {
+      <div class="rounded-box border border-white/10 p-6">
         <p class="font-semibold">{{ item.title }}</p>
         <p class="mt-1 text-sm text-base-content/60">{{ item.text }}</p>
       </div>
@@ -324,14 +319,10 @@
 </section>
 
 <!-- Community -->
-<section class="relative overflow-hidden bg-base-200/30 py-20">
-  <div
-    class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,color-mix(in_oklab,var(--color-primary)_18%,transparent),transparent)]"
-    aria-hidden="true"
-  ></div>
+<section class="bg-base-200/30 py-20">
   <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-reveal>
     <span class="font-display text-sm tracking-widest text-primary uppercase">{{ 'community.eyebrow' | translate }}</span>
-    <h2 class="font-display mt-2 text-4xl tracking-wide sm:text-5xl">{{ 'community.title' | translate }}</h2>
+    <h2 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{{ 'community.title' | translate }}</h2>
     <p class="mt-3 text-base-content/70">{{ 'community.subtitle' | translate }}</p>
 
     <div class="mt-8 flex flex-wrap justify-center gap-3">

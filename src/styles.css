@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
-/* A single dark cinematic theme: this site leans on full-bleed backdrops and heavy
-   gradient scrims that only read correctly against a near-black page, so a light
-   variant would fight the whole premise rather than just needing a palette swap. */
+/* A single dark theme built around the brand accent; a light variant would need
+   its own palette pass rather than a simple swap. */
 @plugin "daisyui" {
   themes: fliks --default;
 }
@@ -60,45 +59,6 @@ section[id] {
 
 .tab {
   border-radius: var(--radius-box, 1.25rem);
-}
-
-/* Scrollbar-free horizontal rows: the row component supplies its own prev/next
-   buttons, so the native scrollbar is only visual noise. */
-.no-scrollbar {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hero backdrop: a blurred, darkened screenshot with a slow Ken Burns drift.
-   Scaled up first so the blur never exposes an edge as it pans. */
-@keyframes kenburns {
-  0% {
-    transform: scale(1.08) translate3d(0, 0, 0);
-  }
-  100% {
-    transform: scale(1.18) translate3d(-1.5%, -1%, 0);
-  }
-}
-.hero-backdrop-img {
-  animation: kenburns 28s ease-in-out infinite alternate;
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-backdrop-img {
-    animation: none;
-  }
-}
-
-/* Scrim stack: fades the backdrop to the page color on every edge so headline
-   text stays legible regardless of what the screenshot behind it looks like. */
-.hero-scrim {
-  background:
-    linear-gradient(to top, var(--color-base-100) 0%, transparent 42%),
-    linear-gradient(to bottom, color-mix(in oklab, var(--color-base-100) 80%, transparent) 0%, transparent 32%),
-    linear-gradient(to right, color-mix(in oklab, var(--color-base-100) 88%, transparent) 0%, transparent 62%),
-    radial-gradient(120% 90% at 28% 18%, transparent 35%, color-mix(in oklab, var(--color-base-100) 55%, transparent) 100%);
 }
 
 /* Scroll-reveal: hidden only once JS confirms it's running and motion is allowed,
@@ -176,24 +136,6 @@ html.reveal-enabled [data-reveal].is-visible {
   transform: translateX(-50%);
   border-radius: 0 0 0.3rem 0.3rem;
   background: rgba(255, 255, 255, 0.08);
-}
-
-/* Feature-tile art: five brand gradients cycled across rows, derived from the logo's
-   blue-to-magenta ramp so abstract tiles still read as "Fliks", not stock icons. */
-.art-1 {
-  background: linear-gradient(135deg, #1c365c, #3c2f72);
-}
-.art-2 {
-  background: linear-gradient(135deg, #3c2f72, #6d2f86);
-}
-.art-3 {
-  background: linear-gradient(135deg, #6d2f86, #9c3f92);
-}
-.art-4 {
-  background: linear-gradient(135deg, #9c3f92, #b54b96);
-}
-.art-5 {
-  background: linear-gradient(135deg, #234b7a, #6d2f86);
 }
 
 /* Below sm, a wide table reads as one card per row instead of scrolling sideways. */
