@@ -7,18 +7,25 @@
         class="tab font-medium"
         [class.tab-active]="active() === i"
         [attr.aria-selected]="active() === i"
-        (click)="active.set(i)"
+        (click)="select(i)"
       >
         {{ item.labelKey | translate }}
       </button>
     }
   </div>
 
-  <div class="relative mt-6 overflow-hidden rounded-2xl border border-white/10 bg-base-300 shadow-2xl">
+  <div class="mt-6 grid overflow-hidden rounded-2xl border border-white/10 bg-base-300 shadow-2xl">
     @for (item of items(); track item.image; let i = $index) {
-      @if (active() === i) {
-        <img [src]="item.image" width="1600" [height]="height()" [alt]="item.altKey | translate" class="h-auto w-full" loading="lazy" />
-      }
+      <img
+        [src]="item.image"
+        width="1600"
+        height="1000"
+        [alt]="item.altKey | translate"
+        [attr.aria-hidden]="active() !== i"
+        class="col-start-1 row-start-1 h-auto w-full"
+        [class]="active() === i ? 'z-10 opacity-100 transition-opacity duration-500 motion-reduce:transition-none' : previous() === i ? 'z-0 opacity-100' : 'z-0 opacity-0'"
+        loading="lazy"
+      />
     }
   </div>
 </div>
