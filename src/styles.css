@@ -109,3 +109,17 @@ section[id] {
     display: none;
   }
 }
+
+/* Blurred brand-colour wash behind the hero, faded out before the next section. */
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 45% at 18% 35%, rgb(74 185 233 / 0.32), transparent 70%),
+    radial-gradient(35% 45% at 78% 30%, rgb(166 63 144 / 0.42), transparent 70%),
+    radial-gradient(40% 40% at 55% 75%, rgb(87 49 138 / 0.4), transparent 70%);
+  filter: blur(60px);
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 55%, transparent);
+}
