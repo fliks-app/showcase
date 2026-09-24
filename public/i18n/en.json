@@ -29,14 +29,6 @@
     "ctaSecondary": "View on GitHub",
     "imageAlt": "The home page, a library, discovery and a film page"
   },
-  "stats": {
-    "license": "License",
-    "licenseValue": "AGPL-3.0",
-    "clients": "Client platforms",
-    "clientsValue": "10",
-    "hosting": "Hosting",
-    "hostingValue": "Your hardware"
-  },
   "features": {
     "eyebrow": "The lineup",
     "title": "Everything a streaming night needs",

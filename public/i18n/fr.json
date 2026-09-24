@@ -29,14 +29,6 @@
     "ctaSecondary": "Voir sur GitHub",
     "imageAlt": "La page d'accueil, une bibliothèque, la découverte et une page de film"
   },
-  "stats": {
-    "license": "Licence",
-    "licenseValue": "AGPL-3.0",
-    "clients": "Plateformes clientes",
-    "clientsValue": "10",
-    "hosting": "Hébergement",
-    "hostingValue": "Votre matériel"
-  },
   "features": {
     "eyebrow": "Au programme",
     "title": "Tout ce qu'on attend d'une soirée streaming",
