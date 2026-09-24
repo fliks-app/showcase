@@ -133,3 +133,11 @@ section[id] {
 .band {
   background: color-mix(in oklab, var(--color-base-200) 55%, transparent);
 }
+
+/* Solid page colour shaped like the transparent collage, so the glow never shows through it. */
+.opaque-cutout {
+  background: var(--color-base-100);
+  mask-position: center;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
