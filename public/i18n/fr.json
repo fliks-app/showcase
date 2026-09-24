@@ -146,7 +146,11 @@
           }
         ]
       }
-    }
+    },
+    "seeAll": "Voir toutes les fonctionnalités",
+    "docsLink": "Lire les guides des fonctionnalités",
+    "metaTitle": "Fonctionnalités de Fliks : streaming, sous-titres, TV en direct",
+    "metaDescription": "Tout ce que fait Fliks : streaming adaptatif, sous-titres trouvés et recalés, TV en direct, playlists, téléchargements hors ligne et profils pour toute la maison."
   },
   "tour": {
     "eyebrow": "Coup d'œil",

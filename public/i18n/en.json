@@ -146,7 +146,11 @@
           }
         ]
       }
-    }
+    },
+    "seeAll": "See all features",
+    "docsLink": "Read the feature guides",
+    "metaTitle": "Fliks features: streaming, subtitles, live TV and more",
+    "metaDescription": "Everything Fliks does: adaptive streaming, subtitles found and synced, live TV, playlists, offline downloads and a household of profiles."
   },
   "tour": {
     "eyebrow": "Sneak peek",

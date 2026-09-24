@@ -42,7 +42,14 @@ export class Home {
     });
   }
 
-  protected readonly featureGroups = ['watching', 'browsing', 'sharing', 'running'] as const;
+  protected readonly highlights = [
+    { group: 'watching', index: 0 },
+    { group: 'watching', index: 1 },
+    { group: 'watching', index: 3 },
+    { group: 'watching', index: 7 },
+    { group: 'sharing', index: 3 },
+    { group: 'running', index: 1 },
+  ];
 
   protected readonly tourItems: TourItem[] = [
     { image: 'img/screenshots/home.webp', labelKey: 'tour.tabs.home', altKey: 'tour.alt.home' },
@@ -50,8 +57,6 @@ export class Home {
     { image: 'img/screenshots/detail.webp', labelKey: 'tour.tabs.detail', altKey: 'tour.alt.detail' },
     { image: 'img/screenshots/player.webp', labelKey: 'tour.tabs.player', altKey: 'tour.alt.player' },
   ];
-
-
 
   protected readonly dockerDownloadLines = DOCKER_DOWNLOAD_LINES;
   protected readonly dockerDownload = DOCKER_DOWNLOAD_LINES.join('\n');
