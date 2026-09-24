@@ -121,11 +121,11 @@ section[id] {
   max-width: none;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.38;
   filter: blur(130px);
 }
 @media (min-width: 1024px) {
   .brand-glow {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 }
