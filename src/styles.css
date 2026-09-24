@@ -36,3 +36,34 @@ section[id] {
   display: none;
 }
 
+
+/* Below sm, a wide table reads as one card per row instead of scrolling sideways. */
+@media (width < 40rem) {
+  .stack-sm,
+  .stack-sm tbody {
+    display: block;
+  }
+  .stack-sm thead {
+    display: none;
+  }
+  .stack-sm tr {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    padding: 0.875rem 1rem;
+  }
+  .stack-sm td {
+    padding: 0;
+    border: 0;
+    font-size: 0.875rem;
+    color: color-mix(in oklab, var(--color-base-content) 70%, transparent);
+  }
+  .stack-sm td:first-child {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-base-content);
+  }
+  .stack-sm td:empty {
+    display: none;
+  }
+}

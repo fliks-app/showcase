@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Fliks : votre collection vidéo personnelle, sur tous les écrans",
+    "title": "Fliks : votre collection vidéo personnelle, sur tous les écrans",
     "description": "Fliks est un serveur multimédia et de streaming auto-hébergé pour votre propre collection vidéo. Gratuit, open source, AGPL-3.0."
   },
   "nav": {
@@ -13,13 +13,16 @@
     "download": "Télécharger",
     "language": "Langue",
     "theme": "Changer de thème",
-    "menu": "Menu"
+    "menu": "Menu",
+    "langs": {
+      "en": "English",
+      "fr": "Français"
+    }
   },
   "hero": {
     "eyebrow": "Serveur multimédia auto-hébergé",
     "title": "Votre collection vidéo personnelle, sur tous les écrans de la maison.",
-    "subtitle": "Pointez Fliks vers les dossiers où se trouvent vos vidéos, il fait le reste : jaquettes, synopsis, casting, saisons et épisodes, présentés comme les services de streaming que vous utilisez déjà. Sauf que la bibliothèque est la vôtre.",
-    "note": "Auto-hébergé. Le serveur tourne sur votre machine. Aucun compte à créer, aucun abonnement, rien ne sort de la maison.",
+    "subtitle": "Indiquez à Fliks les dossiers où sont rangées vos vidéos, il s'occupe du reste : jaquettes, résumés, casting, saisons et épisodes, présentés comme sur les plateformes de streaming que vous connaissez. Sauf que la bibliothèque vous appartient.",
     "ctaPrimary": "Démarrer",
     "ctaSecondary": "Voir sur GitHub",
     "imageAlt": "La page d'accueil de Fliks, une bibliothèque, la découverte et une page de film"
@@ -33,43 +36,43 @@
     "hostingValue": "Votre matériel"
   },
   "features": {
-    "title": "Ce que vous obtenez",
-    "subtitle": "Un vrai service de streaming pour le foyer, sur du matériel que vous possédez déjà.",
+    "title": "Tout ce qu'il faut",
+    "subtitle": "Un vrai service de streaming pour toute la maison, sur du matériel que vous avez déjà.",
     "groups": {
       "watching": {
         "title": "Visionnage",
         "items": [
           {
             "title": "Streaming adaptatif",
-            "text": "La qualité suit la bande passante sans à-coup, ou fixez un débit à la main quand vous préférez décider."
+            "text": "La qualité s'adapte à la connexion sans coupure, ou fixez vous-même le débit si vous préférez."
           },
           {
             "title": "Reprise partout",
-            "text": "Commencez sur le téléphone, terminez sur la TV. La position se synchronise en direct."
+            "text": "Commencez sur le téléphone, finissez sur la TV. La position se synchronise en direct."
           },
           {
-            "title": "Chaque piste, changeable en cours de lecture",
-            "text": "Toutes les pistes audio incluses, tous les sous-titres intégrés et externes, avec votre choix retenu par série."
+            "title": "Changez de piste en pleine lecture",
+            "text": "Toutes les pistes audio du fichier, tous les sous-titres intégrés ou externes. Votre choix est mémorisé pour chaque série."
           },
           {
             "title": "Des sous-titres trouvés pour vous",
-            "text": "Une vidéo sans aucun ? Fliks cherche sur les sites habituels et choisit celui qui correspond vraiment à votre copie."
+            "text": "Une vidéo sans sous-titres ? Fliks les cherche sur les sites habituels et choisit ceux qui correspondent vraiment à votre version."
           },
           {
-            "title": "Désynchronisé, corrigé en un clic",
-            "text": "Fliks écoute les dialogues et recale les sous-titres dessus. Plus besoin de chercher le bon décalage."
+            "title": "Sous-titres décalés, recalés en un clic",
+            "text": "Fliks écoute les dialogues et cale les sous-titres dessus. Plus besoin de chercher le bon décalage."
           },
           {
-            "title": "Traduit à la demande",
-            "text": "Rien dans votre langue ? Traduisez une piste que vous avez déjà. Le résultat est enregistré avec la vidéo, donc ce n'est fait qu'une fois."
+            "title": "Traduction à la demande",
+            "text": "Rien dans votre langue ? Faites traduire une piste existante. Le résultat est enregistré à côté de la vidéo : la traduction n'est faite qu'une fois."
           },
           {
-            "title": "Passer l'intro, épisode suivant, chapitres",
-            "text": "Des aperçus en vignette quand vous naviguez, et un tampon de retour arrière pour la TV en direct."
+            "title": "Passer le générique, épisode suivant, chapitres",
+            "text": "Des aperçus en vignette quand vous avancez dans la vidéo, et un retour en arrière sur la TV en direct."
           },
           {
             "title": "TV en direct",
-            "text": "Ajoutez une playlist M3U ou un compte Xtream. Les chaînes s'ajoutent à côté de votre bibliothèque, avec un guide des programmes."
+            "text": "Ajoutez une playlist M3U ou un compte Xtream. Les chaînes se rangent à côté de votre bibliothèque, avec un guide des programmes."
           }
         ]
       },
@@ -78,23 +81,23 @@
         "items": [
           {
             "title": "Plusieurs bibliothèques côte à côte",
-            "text": "Films, séries, vidéos familiales, enfants. Chacune pointée vers son propre dossier."
+            "text": "Films, séries, vidéos de famille, enfants. Chacune avec son propre dossier."
           },
           {
-            "title": "Recherche dans toutes les bibliothèques",
+            "title": "Une recherche commune à toutes",
             "text": "Filtrez et triez par statut, date d'ajout, note, durée."
           },
           {
             "title": "Métadonnées riches",
-            "text": "Affiches, fonds d'écran, genres, casting et équipe technique. Chaque personne et chaque genre a sa propre page."
+            "text": "Affiches, images de fond, genres, casting et équipe technique. Chaque personne a sa page, avec tout ce qu'elle a fait dans vos bibliothèques."
           },
           {
-            "title": "Rangées d'accueil",
-            "text": "Reprendre la lecture, ajouts récents, et des recommandations pondérées par ce que vous avez vraiment regardé."
+            "title": "Les rangées de l'accueil",
+            "text": "Reprendre la lecture, ajouts récents, et des recommandations fondées sur ce que vous regardez vraiment."
           },
           {
             "title": "Protection contre les spoilers",
-            "text": "Floute le synopsis, la vignette et le titre de ce que vous n'avez pas encore regardé, jusqu'à ce que vous le révéliez."
+            "text": "Floute le résumé et la vignette de ce que vous n'avez pas encore vu, et masque les titres d'épisode qui en disent trop."
           }
         ]
       },
@@ -103,19 +106,19 @@
         "items": [
           {
             "title": "Recommander à quelqu'un",
-            "text": "Choisissez un film ou une saison et envoyez-le à un autre utilisateur. Il apparaît sur sa page d'accueil avec votre nom dessus."
+            "text": "Choisissez un film ou une saison et envoyez-le à un autre utilisateur. Il s'affiche sur sa page d'accueil, avec votre nom."
           },
           {
             "title": "Playlists",
-            "text": "Votre propre ordre de lecture, réorganisable, lecture automatique d'un élément à l'autre."
+            "text": "Votre propre ordre de lecture, réorganisable par glisser-déposer, avec enchaînement automatique."
           },
           {
             "title": "Playlists partagées",
-            "text": "Invitez d'autres utilisateurs comme spectateur, éditeur ou administrateur et construisez-la ensemble."
+            "text": "Invitez d'autres utilisateurs comme lecteur, éditeur ou administrateur, et composez-la ensemble."
           },
           {
-            "title": "Téléchargements toujours à jour",
-            "text": "Ce que vous n'avez pas regardé est téléchargé sur l'appareil, ce que vous avez regardé est retiré. Rien à préparer avant un voyage."
+            "title": "Des téléchargements toujours à jour",
+            "text": "Passez une playlist en automatique : ce que vous n'avez pas vu est téléchargé sur l'appareil, ce que vous avez vu est supprimé. Rien à préparer avant de partir."
           }
         ]
       },
@@ -123,20 +126,20 @@
         "title": "Administration",
         "items": [
           {
-            "title": "Multi-utilisateur",
+            "title": "Multi-utilisateurs",
             "text": "Chacun avec son propre historique, sa progression et ses préférences."
           },
           {
             "title": "Appairage par code QR",
-            "text": "Un code court ou un scan, et la TV reprend la session depuis votre téléphone."
+            "text": "Un code court ou un scan, et la TV récupère la session de votre téléphone."
           },
           {
-            "title": "Tableau de bord de transcodage en direct",
-            "text": "Pour les administrateurs : qui regarde quoi, à quelle qualité, sur quel chemin matériel, et pourquoi."
+            "title": "Suivi des transcodages en direct",
+            "text": "Pour les administrateurs : qui regarde quoi, en quelle qualité, avec quel encodeur, et pourquoi."
           },
           {
             "title": "Images mises en cache localement",
-            "text": "Aucun appel vers des services externes pendant que vous naviguez."
+            "text": "Aucune requête vers des services externes pendant que vous naviguez."
           }
         ]
       }
@@ -144,25 +147,23 @@
   },
   "tour": {
     "title": "En images",
-    "subtitle": "Un aperçu rapide de l'interface, sur le client web.",
+    "subtitle": "Un rapide tour de l'interface, dans le client web.",
     "tabs": {
       "home": "Accueil",
       "library": "Bibliothèque",
       "detail": "Page de film",
-      "discover": "Découverte",
       "player": "Lecteur"
     },
     "alt": {
       "home": "La page d'accueil de Fliks avec les rangées de reprise et de recommandations",
       "library": "Une grille d'affiches de bibliothèque",
       "detail": "Une page de détail de film avec synopsis et équipe",
-      "discover": "La page de découverte pour trouver quelque chose de nouveau à regarder",
       "player": "Le lecteur vidéo avec les contrôles de sous-titres et de qualité"
     }
   },
   "tv": {
     "title": "Pensé pour le salon",
-    "subtitle": "Une application native sur Apple TV et Samsung TV, faite pour une télécommande et un canapé.",
+    "subtitle": "Des applications pour Apple TV, Samsung, LG et Android TV, faites pour la télécommande et le canapé.",
     "appletv": "Apple TV",
     "samsung": "Samsung TV",
     "alt": {
@@ -170,34 +171,32 @@
       "appletvLibrary": "Une liste de films sur Apple TV",
       "appletvDetail": "Une page de détail de film sur Apple TV",
       "appletvPlayer": "Le lecteur sur Apple TV",
-      "tizenHome": "Écran d'accueil de Fliks sur Samsung TV",
       "tizenDetail": "Une page de détail de film sur Samsung TV",
-      "tizenPlayer": "Le lecteur sur Samsung TV",
-      "tizenLibrary": "Une grille de bibliothèque sur Samsung TV"
+      "tizenPlayer": "Le lecteur sur Samsung TV"
     }
   },
   "plugins": {
-    "title": "Extensions",
-    "subtitle": "Fliks ne fournit aucun moyen d'acquérir des médias. Vous installez ce que vous voulez depuis Réglages > Extensions.",
+    "title": "Plugins",
+    "subtitle": "Fliks ne fournit aucun moyen de se procurer des médias. Vous installez ce que vous voulez depuis Paramètres > Plugins.",
     "items": [
       {
-        "title": "L'extension Download",
-        "text": "Apporte la recherche d'indexeurs, la gestion des clients de téléchargement et le pipeline de récupération. Installez-la, elle apparaît dans l'interface."
+        "title": "Le plugin Download",
+        "text": "Ajoute la recherche sur les indexeurs, la gestion des clients de téléchargement et la chaîne de récupération. Une fois installé, il apparaît dans l'interface."
       },
       {
         "title": "Archives signées",
-        "text": "Chaque archive d'extension est signée, et la signature est vérifiée avant toute écriture sur le disque."
+        "text": "Chaque archive de plugin est signée, et la signature est vérifiée avant toute écriture sur le disque."
       },
       {
-        "title": "Isolée par conception",
-        "text": "Une extension de type data fournit du JSON et n'exécute rien. Une extension de type process tourne sous son propre uid, avec son propre schéma de base de données. Elle ne peut pas atteindre les tables d'une autre extension, ni les vôtres."
+        "title": "Cloisonnés par conception",
+        "text": "Un plugin de type data fournit du JSON et n'exécute rien. Un plugin de type process tourne sous son propre uid, avec son propre schéma de base de données. Il ne peut accéder ni aux tables d'un autre plugin, ni aux vôtres."
       },
       {
         "title": "Intégrée à l'interface",
-        "text": "Les pages, entrées de menu et réglages des extensions apparaissent à leur place, et suivent vos permissions comme le reste."
+        "text": "Les pages, entrées de menu et paramètres des plugins apparaissent à leur place, et respectent vos permissions comme tout le reste."
       }
     ],
-    "cta": "Lire la doc des extensions"
+    "cta": "Lire la documentation des plugins"
   },
   "platforms": {
     "title": "Partout où vous regardez",
@@ -205,26 +204,26 @@
     "viewAll": "Voir toutes les plateformes",
     "server": "Serveur",
     "clients": "Clients",
-    "serverList": "Docker, une application Windows dans la barre des tâches, une application macOS dans la barre de menus, ou depuis les sources.",
+    "serverList": "Docker, une application Windows dans la zone de notification, une application macOS dans la barre des menus, ou depuis les sources.",
     "clientList": "Web, iOS, Android, Android TV, Apple TV, Samsung TV, LG TV, ordinateur, Chromecast, Nintendo Switch."
   },
   "getStarted": {
-    "title": "Démarrez en 2 minutes",
-    "subtitle": "Il ne vous faut qu'un dossier avec vos vidéos.",
+    "title": "Prêt en deux minutes",
+    "subtitle": "Il vous faut seulement un dossier avec vos vidéos.",
     "dockerTitle": "Docker, la méthode recommandée",
     "dockerStep1": "Téléchargez le fichier compose",
-    "dockerStep2": "Réglez le chemin de vos médias et les mots de passe, puis lancez-le",
+    "dockerStep2": "Indiquez le chemin de vos médias et les mots de passe, puis lancez le serveur",
     "copy": "Copier",
     "copied": "Copié",
-    "otherWays": "Les installeurs Windows et macOS sont sur la page des releases.",
+    "otherWays": "Les programmes d'installation Windows et macOS sont sur la page des versions.",
     "linkQuickStart": "Guide de démarrage rapide",
     "linkDocker": "Guide d'installation Docker",
-    "linkPlugins": "Aperçu des extensions",
-    "linkReleases": "Dernière release"
+    "linkPlugins": "Gérer les plugins",
+    "linkReleases": "Dernière version"
   },
   "why": {
     "title": "Pourquoi l'auto-hébergement",
-    "subtitle": "La bibliothèque est la vôtre, tout comme la machine qui la fait tourner.",
+    "subtitle": "La bibliothèque est à vous, et la machine qui la fait tourner aussi.",
     "items": [
       {
         "title": "Vos données restent chez vous",
@@ -232,7 +231,7 @@
       },
       {
         "title": "Gratuit et open source",
-        "text": "AGPL-3.0-or-later. Lisez le code, modifiez-le, faites tourner une version modifiée."
+        "text": "AGPL-3.0-or-later. Lisez le code, modifiez-le, faites tourner votre propre version."
       },
       {
         "title": "Aucun catalogue à perdre",
@@ -240,13 +239,13 @@
       },
       {
         "title": "Tourne sur ce que vous avez",
-        "text": "Un NAS, une machine de récup, un serveur maison. Transcodage matériel quand la machine le permet."
+        "text": "Un NAS, une vieille machine, un serveur maison. Transcodage matériel quand la machine le permet."
       }
     ]
   },
   "community": {
-    "title": "Open source, construit au grand jour",
-    "subtitle": "Chaque changement, chaque release et chaque discussion se passe sur GitHub.",
+    "title": "Open source, développé au grand jour",
+    "subtitle": "Tout se passe sur GitHub : chaque modification, chaque version, chaque discussion.",
     "github": "Code source",
     "issues": "Signaler un problème",
     "releases": "Notes de version",
@@ -260,7 +259,7 @@
     "rights": "Fliks est un logiciel libre et open source, sous licence AGPL-3.0-or-later."
   },
   "download": {
-    "metaTitle": "Télécharger Fliks : toutes les plateformes",
+    "metaTitle": "Télécharger Fliks : toutes les plateformes",
     "eyebrow": "Télécharger",
     "title": "Fliks sur tous les écrans",
     "subtitle": "Le même compte, le même historique, la même bibliothèque, où que vous l'installiez.",
@@ -272,42 +271,144 @@
       "notes": "Notes"
     },
     "clients": [
-      { "name": "Web / PWA", "source": "Votre navigateur, à l'adresse du serveur", "minimum": "Tout navigateur récent", "notes": "Installable sur l'écran d'accueil" },
-      { "name": "iOS / iPadOS", "source": "App Store", "minimum": "iOS 16.6", "notes": "" },
-      { "name": "Android", "source": "Play Store", "minimum": "Android 6 (API 23)", "notes": "Téléphone et tablette" },
-      { "name": "Android TV", "source": "Play Store", "minimum": "Android 6", "notes": "" },
-      { "name": "Samsung TV (Tizen)", "source": "Installation manuelle pour l'instant", "minimum": "Tizen 5.5", "notes": "Fonctionne entièrement, pas encore sur le Samsung App Store" },
-      { "name": "LG TV (webOS)", "source": "LG Content Store", "minimum": "webOS 7.0", "notes": "Approuvée, disponible sur le store" },
-      { "name": "Ordinateur", "source": "Fichiers de release", "minimum": "macOS : Apple Silicon", "notes": "Windows .exe, macOS .dmg, Linux .deb / AppImage" },
-      { "name": "Chromecast", "source": "Intégré, diffusez depuis n'importe quel client", "minimum": "Tous", "notes": "Récepteur personnalisé, même moteur de lecture" },
-      { "name": "Apple TV", "source": "App Store", "minimum": "tvOS 17", "notes": "Application native SwiftUI" },
-      { "name": "Nintendo Switch", "source": "Compilez le .nro depuis switchfliks", "minimum": "Console avec homebrew activé", "notes": "Bêta, client natif avec décodage matériel" }
+      {
+        "name": "Web / PWA",
+        "source": "Votre navigateur, à l'adresse du serveur",
+        "minimum": "Tout navigateur récent",
+        "notes": "Installable sur l'écran d'accueil"
+      },
+      {
+        "name": "iOS / iPadOS",
+        "source": "App Store",
+        "minimum": "iOS 16.6",
+        "notes": ""
+      },
+      {
+        "name": "Android",
+        "source": "Play Store",
+        "minimum": "Android 6 (API 23)",
+        "notes": "Téléphone et tablette"
+      },
+      {
+        "name": "Android TV",
+        "source": "Play Store",
+        "minimum": "Android 6",
+        "notes": ""
+      },
+      {
+        "name": "Samsung TV (Tizen)",
+        "source": "Installation manuelle pour l'instant",
+        "minimum": "Tizen 5.5",
+        "notes": "Entièrement fonctionnelle, pas encore sur la boutique Samsung"
+      },
+      {
+        "name": "LG TV (webOS)",
+        "source": "LG Content Store",
+        "minimum": "webOS 7.0",
+        "notes": "Validée, disponible sur la boutique LG"
+      },
+      {
+        "name": "Ordinateur",
+        "source": "Fichiers joints aux versions",
+        "minimum": "macOS : Apple Silicon",
+        "notes": "Windows .exe, macOS .dmg, Linux .deb / AppImage"
+      },
+      {
+        "name": "Chromecast",
+        "source": "Intégré, diffusez depuis n'importe quel client",
+        "minimum": "Tous les modèles",
+        "notes": "Récepteur personnalisé, même moteur de lecture"
+      },
+      {
+        "name": "Apple TV",
+        "source": "App Store",
+        "minimum": "tvOS 17",
+        "notes": "Application native SwiftUI"
+      },
+      {
+        "name": "Nintendo Switch",
+        "source": "Compilez le .nro à partir de switchfliks",
+        "minimum": "Console compatible homebrew",
+        "notes": "Bêta, client natif avec décodage matériel"
+      }
     ],
     "serverTitle": "Serveur",
     "serverTable": {
-      "how": "Mode d'exécution",
+      "how": "Installation",
       "platforms": "Plateformes",
       "hardware": "Transcodage matériel",
       "shipsWith": "Fourni avec"
     },
     "servers": [
-      { "how": "Docker (recommandé)", "platforms": "linux/amd64, linux/arm64", "hardware": "Intel QSV, VAAPI, NVIDIA NVENC, AMD", "shipsWith": "Backend, client web, FFmpeg" },
-      { "how": "Windows, application dans la barre des tâches, installeur NSIS", "platforms": "Windows x64", "hardware": "Intel QSV, AMD AMF, NVIDIA NVENC, détection automatique", "shipsWith": "Tout inclus, aucune dépendance" },
-      { "how": "macOS, application dans la barre de menus, .dmg", "platforms": "macOS 13 Ventura et plus, Apple Silicon", "hardware": "VideoToolbox", "shipsWith": "Tout inclus, aucune dépendance" },
-      { "how": "Depuis les sources", "platforms": "Partout où Node fonctionne", "hardware": "Ce que votre FFmpeg expose", "shipsWith": "" }
+      {
+        "how": "Docker (recommandé)",
+        "platforms": "linux/amd64, linux/arm64",
+        "hardware": "Intel QSV, VAAPI, NVIDIA NVENC, AMD",
+        "shipsWith": "Backend, client web, FFmpeg"
+      },
+      {
+        "how": "Windows, application dans la zone de notification, installateur NSIS",
+        "platforms": "Windows x64",
+        "hardware": "Intel QSV, AMD AMF, NVIDIA NVENC, détection automatique",
+        "shipsWith": "Tout inclus, aucune dépendance"
+      },
+      {
+        "how": "macOS, application dans la barre des menus, .dmg",
+        "platforms": "macOS 13 Ventura ou ultérieur, Apple Silicon",
+        "hardware": "VideoToolbox",
+        "shipsWith": "Tout inclus, aucune dépendance"
+      },
+      {
+        "how": "Depuis les sources",
+        "platforms": "Partout où Node fonctionne",
+        "hardware": "Ce que propose votre FFmpeg",
+        "shipsWith": ""
+      }
     ],
     "encodersTitle": "Encodeurs",
-    "encodersSubtitle": "Le chemin matériel disponible dépend de la machine, pas de Fliks. Il est détecté au démarrage, avec repli sur le CPU si rien d'autre ne répond.",
-    "encodersHeaders": { "codec": "Codec", "cpu": "CPU", "qsv": "Intel QSV", "vaapi": "VAAPI", "nvenc": "NVIDIA NVENC", "amf": "AMD AMF", "vt": "VideoToolbox" },
+    "encodersSubtitle": "L'accélération matérielle disponible dépend de la machine, pas de Fliks. Elle est détectée au démarrage, avec repli sur le CPU si rien d'autre ne répond.",
+    "encodersHeaders": {
+      "codec": "Codec",
+      "cpu": "CPU",
+      "qsv": "Intel QSV",
+      "vaapi": "VAAPI",
+      "nvenc": "NVIDIA NVENC",
+      "amf": "AMD AMF",
+      "vt": "VideoToolbox"
+    },
     "encodersRows": [
-      { "codec": "H.264", "cpu": "✓", "qsv": "✓", "vaapi": "✓", "nvenc": "✓", "amf": "✓", "vt": "✓" },
-      { "codec": "HEVC", "cpu": "✓", "qsv": "✓", "vaapi": "✓", "nvenc": "✓", "amf": "✓", "vt": "✓" },
-      { "codec": "AV1", "cpu": "✓", "qsv": "✓", "vaapi": "✓", "nvenc": "✓", "amf": "✓", "vt": "-" }
+      {
+        "codec": "H.264",
+        "cpu": "✓",
+        "qsv": "✓",
+        "vaapi": "✓",
+        "nvenc": "✓",
+        "amf": "✓",
+        "vt": "✓"
+      },
+      {
+        "codec": "HEVC",
+        "cpu": "✓",
+        "qsv": "✓",
+        "vaapi": "✓",
+        "nvenc": "✓",
+        "amf": "✓",
+        "vt": "✓"
+      },
+      {
+        "codec": "AV1",
+        "cpu": "✓",
+        "qsv": "✓",
+        "vaapi": "✓",
+        "nvenc": "✓",
+        "amf": "✓",
+        "vt": "-"
+      }
     ],
-    "encodersNote": "HDR10, HLG et Dolby Vision sont convertis en SDR quand l'appareil qui reçoit ne peut pas les afficher.",
+    "encodersNote": "Les contenus HDR10, HLG et Dolby Vision sont convertis en SDR quand l'appareil ne peut pas les afficher.",
     "getFliks": "Installer le serveur",
-    "getFliksText": "Récupérez la dernière release, ou suivez le démarrage rapide Docker.",
-    "linkReleases": "Dernière release",
+    "getFliksText": "Téléchargez la dernière version, ou suivez le démarrage rapide avec Docker.",
+    "linkReleases": "Dernière version",
     "linkQuickStart": "Guide de démarrage rapide"
   }
 }

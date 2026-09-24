@@ -26,7 +26,6 @@ export class Home {
     { image: 'img/screenshots/home.webp', labelKey: 'tour.tabs.home', altKey: 'tour.alt.home' },
     { image: 'img/screenshots/library.webp', labelKey: 'tour.tabs.library', altKey: 'tour.alt.library' },
     { image: 'img/screenshots/detail.webp', labelKey: 'tour.tabs.detail', altKey: 'tour.alt.detail' },
-    { image: 'img/screenshots/discover.webp', labelKey: 'tour.tabs.discover', altKey: 'tour.alt.discover' },
     { image: 'img/screenshots/player.webp', labelKey: 'tour.tabs.player', altKey: 'tour.alt.player' },
   ];
 
@@ -38,8 +37,6 @@ export class Home {
   ];
 
   protected readonly tizenItems: TourItem[] = [
-    { image: 'img/tv/tizen-home.webp', labelKey: 'tour.tabs.home', altKey: 'tv.alt.tizenHome' },
-    { image: 'img/tv/tizen-library.webp', labelKey: 'tour.tabs.library', altKey: 'tv.alt.tizenLibrary' },
     { image: 'img/tv/tizen-detail.webp', labelKey: 'tour.tabs.detail', altKey: 'tv.alt.tizenDetail' },
     { image: 'img/tv/tizen-player.webp', labelKey: 'tour.tabs.player', altKey: 'tv.alt.tizenPlayer' },
   ];

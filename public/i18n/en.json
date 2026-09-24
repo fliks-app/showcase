@@ -13,13 +13,16 @@
     "download": "Download",
     "language": "Language",
     "theme": "Toggle theme",
-    "menu": "Menu"
+    "menu": "Menu",
+    "langs": {
+      "en": "English",
+      "fr": "Français"
+    }
   },
   "hero": {
     "eyebrow": "Self-hosted media server",
     "title": "Your personal video collection, on every screen in the house.",
     "subtitle": "Point Fliks at the folders where your videos live and it does the rest: covers, descriptions, cast, seasons and episodes, laid out like the streaming apps you already use. Except the library is yours.",
-    "note": "Self-hosted. The server runs on your machine. No account to create, no subscription, nothing leaves the house.",
     "ctaPrimary": "Get started",
     "ctaSecondary": "View on GitHub",
     "imageAlt": "The Fliks home page, a library, discovery and a film page"
@@ -86,7 +89,7 @@
           },
           {
             "title": "Rich metadata",
-            "text": "Posters, fanart, genres, cast and crew. Every person and every genre is its own page."
+            "text": "Posters, fanart, genres, cast and crew. Every person gets a page listing their work in your libraries."
           },
           {
             "title": "Home rows",
@@ -94,7 +97,7 @@
           },
           {
             "title": "Spoiler protection",
-            "text": "Blurs the synopsis, the thumbnail and the title of anything you have not watched yet, until you reveal it."
+            "text": "Blurs the synopsis and thumbnail of anything you have not watched yet, and hides episode titles that give the plot away."
           }
         ]
       },
@@ -115,7 +118,7 @@
           },
           {
             "title": "Downloads that keep themselves current",
-            "text": "What you have not watched is downloaded to the device, what you have watched is removed. Nothing to think about before a trip."
+            "text": "Set a playlist to automatic: what you have not watched is downloaded to the device, what you have watched is removed. Nothing to think about before a trip."
           }
         ]
       },
@@ -149,20 +152,18 @@
       "home": "Home",
       "library": "Library",
       "detail": "Film page",
-      "discover": "Discover",
       "player": "Player"
     },
     "alt": {
       "home": "The Fliks home page with continue watching and recommendation rows",
       "library": "A library grid of posters",
       "detail": "A film detail page with synopsis, cast and crew",
-      "discover": "The discover page for finding something new to watch",
       "player": "The video player with subtitle and quality controls"
     }
   },
   "tv": {
     "title": "Built for the living room",
-    "subtitle": "A native app on Apple TV and Samsung TV, made for a remote and a couch.",
+    "subtitle": "Apps for Apple TV, Samsung, LG and Android TV, made for a remote and a couch.",
     "appletv": "Apple TV",
     "samsung": "Samsung TV",
     "alt": {
@@ -170,10 +171,8 @@
       "appletvLibrary": "A movies list on Apple TV",
       "appletvDetail": "A film detail page on Apple TV",
       "appletvPlayer": "The Apple TV player",
-      "tizenHome": "Fliks home screen on Samsung TV",
       "tizenDetail": "A film detail page on Samsung TV",
-      "tizenPlayer": "The Samsung TV player",
-      "tizenLibrary": "A library grid on Samsung TV"
+      "tizenPlayer": "The Samsung TV player"
     }
   },
   "plugins": {
@@ -219,7 +218,7 @@
     "otherWays": "Windows and macOS installers are on the releases page.",
     "linkQuickStart": "Quick start guide",
     "linkDocker": "Docker install guide",
-    "linkPlugins": "Plugins overview",
+    "linkPlugins": "Managing plugins",
     "linkReleases": "Latest release"
   },
   "why": {
@@ -272,16 +271,66 @@
       "notes": "Notes"
     },
     "clients": [
-      { "name": "Web / PWA", "source": "Your browser, at the server URL", "minimum": "Any current browser", "notes": "Installable to the home screen" },
-      { "name": "iOS / iPadOS", "source": "App Store", "minimum": "iOS 16.6", "notes": "" },
-      { "name": "Android", "source": "Play Store", "minimum": "Android 6 (API 23)", "notes": "Phone and tablet" },
-      { "name": "Android TV", "source": "Play Store", "minimum": "Android 6", "notes": "" },
-      { "name": "Samsung TV (Tizen)", "source": "Sideload for now", "minimum": "Tizen 5.5", "notes": "Works fully, not yet on the Samsung app store" },
-      { "name": "LG TV (webOS)", "source": "LG Content Store", "minimum": "webOS 7.0", "notes": "Approved, on the store" },
-      { "name": "Desktop", "source": "Release assets", "minimum": "macOS: Apple Silicon", "notes": "Windows .exe, macOS .dmg, Linux .deb / AppImage" },
-      { "name": "Chromecast", "source": "Built in, cast from any client", "minimum": "Any", "notes": "Custom receiver, same player engine" },
-      { "name": "Apple TV", "source": "App Store", "minimum": "tvOS 17", "notes": "Native SwiftUI app" },
-      { "name": "Nintendo Switch", "source": "Build the .nro from switchfliks", "minimum": "Homebrew-enabled console", "notes": "Beta, native client with hardware decode" }
+      {
+        "name": "Web / PWA",
+        "source": "Your browser, at the server URL",
+        "minimum": "Any current browser",
+        "notes": "Installable to the home screen"
+      },
+      {
+        "name": "iOS / iPadOS",
+        "source": "App Store",
+        "minimum": "iOS 16.6",
+        "notes": ""
+      },
+      {
+        "name": "Android",
+        "source": "Play Store",
+        "minimum": "Android 6 (API 23)",
+        "notes": "Phone and tablet"
+      },
+      {
+        "name": "Android TV",
+        "source": "Play Store",
+        "minimum": "Android 6",
+        "notes": ""
+      },
+      {
+        "name": "Samsung TV (Tizen)",
+        "source": "Sideload for now",
+        "minimum": "Tizen 5.5",
+        "notes": "Works fully, not yet on the Samsung app store"
+      },
+      {
+        "name": "LG TV (webOS)",
+        "source": "LG Content Store",
+        "minimum": "webOS 7.0",
+        "notes": "Approved, on the store"
+      },
+      {
+        "name": "Desktop",
+        "source": "Release assets",
+        "minimum": "macOS: Apple Silicon",
+        "notes": "Windows .exe, macOS .dmg, Linux .deb / AppImage"
+      },
+      {
+        "name": "Chromecast",
+        "source": "Built in, cast from any client",
+        "minimum": "Any",
+        "notes": "Custom receiver, same player engine"
+      },
+      {
+        "name": "Apple TV",
+        "source": "App Store",
+        "minimum": "tvOS 17",
+        "notes": "Native SwiftUI app"
+      },
+      {
+        "name": "Nintendo Switch",
+        "source": "Build the .nro from switchfliks",
+        "minimum": "Homebrew-enabled console",
+        "notes": "Beta, native client with hardware decode"
+      }
     ],
     "serverTitle": "Server",
     "serverTable": {
@@ -291,18 +340,70 @@
       "shipsWith": "Ships with"
     },
     "servers": [
-      { "how": "Docker (recommended)", "platforms": "linux/amd64, linux/arm64", "hardware": "Intel QSV, VAAPI, NVIDIA NVENC, AMD", "shipsWith": "Backend, web client, FFmpeg" },
-      { "how": "Windows, tray app, NSIS installer", "platforms": "Windows x64", "hardware": "Intel QSV, AMD AMF, NVIDIA NVENC, auto-detected", "shipsWith": "Everything, no dependencies" },
-      { "how": "macOS, menu-bar app, .dmg", "platforms": "macOS 13 Ventura+, Apple Silicon", "hardware": "VideoToolbox", "shipsWith": "Everything, no dependencies" },
-      { "how": "From source", "platforms": "Anywhere Node runs", "hardware": "Whatever your FFmpeg exposes", "shipsWith": "" }
+      {
+        "how": "Docker (recommended)",
+        "platforms": "linux/amd64, linux/arm64",
+        "hardware": "Intel QSV, VAAPI, NVIDIA NVENC, AMD",
+        "shipsWith": "Backend, web client, FFmpeg"
+      },
+      {
+        "how": "Windows, tray app, NSIS installer",
+        "platforms": "Windows x64",
+        "hardware": "Intel QSV, AMD AMF, NVIDIA NVENC, auto-detected",
+        "shipsWith": "Everything, no dependencies"
+      },
+      {
+        "how": "macOS, menu-bar app, .dmg",
+        "platforms": "macOS 13 Ventura+, Apple Silicon",
+        "hardware": "VideoToolbox",
+        "shipsWith": "Everything, no dependencies"
+      },
+      {
+        "how": "From source",
+        "platforms": "Anywhere Node runs",
+        "hardware": "Whatever your FFmpeg exposes",
+        "shipsWith": ""
+      }
     ],
     "encodersTitle": "Encoders",
     "encodersSubtitle": "Which hardware path is available depends on the machine, not on Fliks. It probes at startup and falls back to CPU when nothing else answers.",
-    "encodersHeaders": { "codec": "Codec", "cpu": "CPU", "qsv": "Intel QSV", "vaapi": "VAAPI", "nvenc": "NVIDIA NVENC", "amf": "AMD AMF", "vt": "VideoToolbox" },
+    "encodersHeaders": {
+      "codec": "Codec",
+      "cpu": "CPU",
+      "qsv": "Intel QSV",
+      "vaapi": "VAAPI",
+      "nvenc": "NVIDIA NVENC",
+      "amf": "AMD AMF",
+      "vt": "VideoToolbox"
+    },
     "encodersRows": [
-      { "codec": "H.264", "cpu": "✓", "qsv": "✓", "vaapi": "✓", "nvenc": "✓", "amf": "✓", "vt": "✓" },
-      { "codec": "HEVC", "cpu": "✓", "qsv": "✓", "vaapi": "✓", "nvenc": "✓", "amf": "✓", "vt": "✓" },
-      { "codec": "AV1", "cpu": "✓", "qsv": "✓", "vaapi": "✓", "nvenc": "✓", "amf": "✓", "vt": "-" }
+      {
+        "codec": "H.264",
+        "cpu": "✓",
+        "qsv": "✓",
+        "vaapi": "✓",
+        "nvenc": "✓",
+        "amf": "✓",
+        "vt": "✓"
+      },
+      {
+        "codec": "HEVC",
+        "cpu": "✓",
+        "qsv": "✓",
+        "vaapi": "✓",
+        "nvenc": "✓",
+        "amf": "✓",
+        "vt": "✓"
+      },
+      {
+        "codec": "AV1",
+        "cpu": "✓",
+        "qsv": "✓",
+        "vaapi": "✓",
+        "nvenc": "✓",
+        "amf": "✓",
+        "vt": "-"
+      }
     ],
     "encodersNote": "HDR10, HLG and Dolby Vision are tone-mapped to SDR when the receiving device cannot render them.",
     "getFliks": "Get the server",

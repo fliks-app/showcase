@@ -32,7 +32,7 @@
               (click)="useLang(lang)"
               [class.menu-active]="translate.currentLang() === lang"
             >
-              {{ lang === 'en' ? 'English' : 'Français' }}
+              {{ 'nav.langs.' + lang | translate }}
             </button>
           </li>
         }

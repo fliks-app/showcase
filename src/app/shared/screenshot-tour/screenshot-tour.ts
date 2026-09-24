@@ -14,5 +14,7 @@ export interface TourItem {
 })
 export class ScreenshotTour {
   readonly items = input.required<TourItem[]>();
+  /** Intrinsic height of the set's 1600px-wide images, so the frame is sized before they load. */
+  readonly height = input(1000);
   protected readonly active = signal(0);
 }

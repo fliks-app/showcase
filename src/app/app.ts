@@ -1,10 +1,10 @@
-import { Component, PLATFORM_ID, afterNextRender, inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, PLATFORM_ID, afterNextRender, effect, inject } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Navbar } from './shared/navbar/navbar';
 import { Footer } from './shared/footer/footer';
-import { SUPPORTED_LANGS, SupportedLang } from './core/translate-loader';
+import { DEFAULT_LANG, SUPPORTED_LANGS, SupportedLang } from './core/translate-loader';
 
 @Component({
   imports: [RouterOutlet, Navbar, Footer],
@@ -15,6 +15,9 @@ export class App {
   constructor() {
     const translate = inject(TranslateService);
     const isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+    const root = inject(DOCUMENT).documentElement;
+
+    effect(() => root.setAttribute('lang', translate.currentLang() ?? DEFAULT_LANG));
 
     // The static build always prerenders English; pick up a stored choice or the
     // browser's language only once running client-side, after first paint.

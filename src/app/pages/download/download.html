@@ -8,7 +8,7 @@
   <!-- Clients -->
   <h2 class="mt-16 text-xl font-semibold">{{ 'download.clientsTitle' | translate }}</h2>
   <div class="mt-4 overflow-x-auto rounded-2xl border border-base-300">
-    <table class="table">
+    <table class="table stack-sm">
       <thead>
         <tr>
           <th>{{ 'download.clientTable.client' | translate }}</th>
@@ -20,10 +20,10 @@
       <tbody>
         @for (client of ('download.clients' | translate); track client.name) {
           <tr>
-            <td class="font-medium whitespace-nowrap">{{ client.name }}</td>
+            <td class="font-medium sm:whitespace-nowrap">{{ client.name }}</td>
             <td>{{ client.source }}</td>
-            <td class="whitespace-nowrap">{{ client.minimum }}</td>
-            <td class="text-base-content/60">{{ client.notes }}</td>
+            <td class="sm:whitespace-nowrap">{{ client.minimum }}</td>
+            <td class="text-base-content/70">{{ client.notes }}</td>
           </tr>
         }
       </tbody>
@@ -33,7 +33,7 @@
   <!-- Server -->
   <h2 class="mt-16 text-xl font-semibold">{{ 'download.serverTitle' | translate }}</h2>
   <div class="mt-4 overflow-x-auto rounded-2xl border border-base-300">
-    <table class="table">
+    <table class="table stack-sm">
       <thead>
         <tr>
           <th>{{ 'download.serverTable.how' | translate }}</th>
@@ -48,7 +48,7 @@
             <td class="font-medium">{{ server.how }}</td>
             <td>{{ server.platforms }}</td>
             <td>{{ server.hardware }}</td>
-            <td class="text-base-content/60">{{ server.shipsWith }}</td>
+            <td class="text-base-content/70">{{ server.shipsWith }}</td>
           </tr>
         }
       </tbody>
@@ -87,7 +87,7 @@
       </tbody>
     </table>
   </div>
-  <p class="mt-3 text-sm text-base-content/60">{{ 'download.encodersNote' | translate }}</p>
+  <p class="mt-3 text-sm text-base-content/70">{{ 'download.encodersNote' | translate }}</p>
 
   <!-- CTA -->
   <div class="mt-16 rounded-2xl border border-base-300 bg-base-200/40 p-8 text-center">
