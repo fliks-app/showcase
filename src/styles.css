@@ -110,13 +110,13 @@ section[id] {
   }
 }
 
-/* The Fliks mark, heavily blurred, as a brand-colour wash behind the hero. */
-.hero-glow {
-  position: absolute;
+/* The Fliks mark, heavily blurred, fixed behind every page. */
+.brand-glow {
+  position: fixed;
   top: 50%;
   left: 50%;
   z-index: -1;
-  height: 60%;
+  height: 60vh;
   width: auto;
   max-width: none;
   transform: translate(-50%, -50%);
@@ -125,7 +125,7 @@ section[id] {
   filter: blur(130px);
 }
 @media (min-width: 1024px) {
-  .hero-glow {
+  .brand-glow {
     opacity: 0.8;
   }
 }
