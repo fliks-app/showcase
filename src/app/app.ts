@@ -5,7 +5,6 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Navbar } from './shared/navbar/navbar';
 import { Footer } from './shared/footer/footer';
 import { DEFAULT_LANG, SUPPORTED_LANGS, SupportedLang } from './core/translate-loader';
-import { initScrollReveal } from './core/scroll-reveal';
 
 @Component({
   imports: [RouterOutlet, Navbar, Footer, TranslatePipe],
@@ -37,7 +36,6 @@ export class App {
       if (detected && (SUPPORTED_LANGS as readonly string[]).includes(detected)) {
         translate.use(detected as SupportedLang);
       }
-      initScrollReveal();
     });
   }
 }
