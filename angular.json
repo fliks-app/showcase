@@ -30,7 +30,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/showcase/",
+              "baseHref": "/",
               "budgets": [
                 {
                   "type": "initial",

@@ -1,7 +1,7 @@
 # Fliks showcase
 
 The marketing site for [Fliks](https://github.com/fliks-app/fliks), a self-hosted media server and streaming app.
-Deployed to GitHub Pages at `/showcase/` on every push to `main` (see `.github/workflows/deploy.yml`).
+Deployed to GitHub Pages at [fliks.media](https://fliks.media/) on every push to `main` (see `.github/workflows/deploy.yml`).
 
 Angular 22, standalone components, zoneless, Tailwind CSS 4 + daisyUI 5, ngx-translate (English and French,
 auto-detected). Statically prerendered: `npm run build` outputs real HTML for every route, no server needed.
@@ -20,15 +20,8 @@ Opens at `http://localhost:4200/`.
 npm run build
 ```
 
-Prerendered output lands in `dist/showcase/browser`. To check it under the `/showcase/` base path it will be
-served from in production, copy that folder into a `showcase/` directory and serve the parent with any static
-file server, for example:
-
-```bash
-mkdir -p /tmp/site/showcase
-cp -r dist/showcase/browser/* /tmp/site/showcase/
-npx http-server /tmp/site
-```
+Prerendered output lands in `dist/showcase/browser`. Serve it with any static file server, for example
+`npx http-server dist/showcase/browser`.
 
 ## Updating content
 

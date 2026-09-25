@@ -3,7 +3,7 @@ import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 
-const SITE_URL = 'https://fliks-app.github.io/showcase/';
+const SITE_URL = 'https://fliks.media/';
 const OG_IMAGE = { url: `${SITE_URL}img/og-image.jpg`, width: 1200, height: 630 };
 
 export interface SeoPage {
