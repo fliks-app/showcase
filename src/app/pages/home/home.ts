@@ -35,7 +35,7 @@ export class Home {
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         license: 'https://www.gnu.org/licenses/agpl-3.0.html',
         url: 'https://fliks.media/',
-        image: 'https://fliks.media/img/og-image.jpg',
+        image: 'https://fliks.media/img/social-card.jpg',
         codeRepository: 'https://github.com/fliks-app/fliks',
         sameAs: ['https://github.com/fliks-app/fliks'],
       },
