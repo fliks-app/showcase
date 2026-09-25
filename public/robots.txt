@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fliks-app.github.io/showcase/sitemap.xml
+Sitemap: https://fliks.media/sitemap.xml
