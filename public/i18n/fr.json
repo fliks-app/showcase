@@ -211,7 +211,8 @@
     "github": "Code source",
     "issues": "Signaler un problème",
     "releases": "Notes de version",
-    "license": "Licence"
+    "license": "Licence",
+    "thirdParty": "Composants tiers"
   },
   "footer": {
     "tagline": "Votre collection vidéo personnelle, sur tous les écrans de la maison.",

@@ -211,7 +211,8 @@
     "github": "Source code",
     "issues": "Report an issue",
     "releases": "Release notes",
-    "license": "License"
+    "license": "License",
+    "thirdParty": "Third-party notices"
   },
   "footer": {
     "tagline": "Your personal video collection, on every screen in the house.",
