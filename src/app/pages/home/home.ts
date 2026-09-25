@@ -1,6 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import {
+  LucideCaptions,
+  LucideCloudDownload,
+  LucideDynamicIcon,
+  LucideEyeOff,
+  LucideLanguages,
+  LucideMonitorSmartphone,
+  LucideSunMedium,
+} from '@lucide/angular';
 import { ScreenshotTour, TourItem } from '../../shared/screenshot-tour/screenshot-tour';
 import { setPageTitle } from '../../core/page-title';
 import { setSeo } from '../../core/seo';
@@ -16,7 +25,7 @@ const OPERATING_SYSTEMS = ['Windows', 'macOS', 'Linux', 'iOS', 'iPadOS', 'Androi
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, TranslatePipe, ScreenshotTour],
+  imports: [RouterLink, TranslatePipe, ScreenshotTour, LucideDynamicIcon],
   templateUrl: './home.html',
 })
 export class Home {
@@ -43,12 +52,12 @@ export class Home {
   }
 
   protected readonly highlights = [
-    { group: 'watching', index: 1 },
-    { group: 'watching', index: 2 },
-    { group: 'sharing', index: 0 },
-    { group: 'browsing', index: 0 },
-    { group: 'sharing', index: 4 },
-    { group: 'watching', index: 4 },
+    { group: 'watching', index: 1, icon: LucideLanguages },
+    { group: 'watching', index: 2, icon: LucideCaptions },
+    { group: 'sharing', index: 0, icon: LucideMonitorSmartphone },
+    { group: 'browsing', index: 0, icon: LucideEyeOff },
+    { group: 'sharing', index: 4, icon: LucideCloudDownload },
+    { group: 'watching', index: 4, icon: LucideSunMedium },
   ];
 
   protected readonly tourItems: TourItem[] = [
