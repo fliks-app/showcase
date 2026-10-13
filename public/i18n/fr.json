@@ -60,6 +60,10 @@
           {
             "title": "Une TV en direct que vous pouvez mettre en pause",
             "text": "Ajoutez votre playlist IPTV : un guide des programmes à côté de votre bibliothèque, avec pause et retour arrière en direct."
+          },
+          {
+            "title": "Pubs sautées, coupes respectées",
+            "text": "Déposez à côté d'une vidéo le fichier .edl que Comskip ou MCEBuddy peuvent écrire : Fliks saute les pubs, passe les coupes et coupe le son là où il faut."
           }
         ]
       },
@@ -119,6 +123,10 @@
           {
             "title": "Suivi des transcodages en direct",
             "text": "Qui regarde quoi, en quelle qualité, par quel chemin matériel, et pourquoi un transcodage a été nécessaire."
+          },
+          {
+            "title": "Pourquoi ça saccade ?",
+            "text": "Chaque appli raconte comment s'est passée la lecture. Fliks vous dit si la faute vient du réseau, de l'appareil ou du serveur, avec la chronologie de chaque coupure."
           },
           {
             "title": "Demandes avec approbation automatique",

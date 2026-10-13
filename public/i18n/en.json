@@ -60,6 +60,10 @@
           {
             "title": "Live TV you can pause",
             "text": "Bring your IPTV playlist: a program guide next to your library, with pause and rewind on live channels."
+          },
+          {
+            "title": "Ads skipped, cuts honoured",
+            "text": "Drop the .edl file Comskip or MCEBuddy can write next to a video: Fliks skips the commercials, jumps the cuts and mutes what should be muted."
           }
         ]
       },
@@ -119,6 +123,10 @@
           {
             "title": "Live transcode dashboard",
             "text": "Who is watching what, at which quality, on which hardware path, and why a transcode was needed."
+          },
+          {
+            "title": "Why is it stuttering?",
+            "text": "Every app reports how each playback went. Fliks tells you whether the network, the device or the server was to blame, with a timeline of every freeze."
           },
           {
             "title": "Requests with auto-approval",
