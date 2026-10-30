@@ -109,7 +109,11 @@
           },
           {
             "title": "Des téléchargements toujours à jour",
-            "text": "Passez une playlist en automatique : ce que vous n'avez pas vu est téléchargé, ce que vous avez vu est supprimé. Prêt avant un voyage."
+            "text": "Téléchargez une saison ou une série entière en un geste. Passez une série ou une playlist en automatique : les prochains épisodes restent sur l'appareil, ceux que vous avez vus sont supprimés. Wifi seulement et plafond de stockage gardent la main."
+          },
+          {
+            "title": "Soirées partagées",
+            "text": "Lancez la lecture ensemble : lecture synchronisée, chat et voix. Ajoutez des films au programme, votez pour choisir, ou ouvrez une soirée publique. Web, mobile, ordinateur et Apple TV, les TV suivent la lecture."
           }
         ]
       },
@@ -131,6 +135,10 @@
           {
             "title": "Demandes avec approbation automatique",
             "text": "Les membres du foyer demandent des titres ; les règles que vous fixez approuvent ceux en qui vous avez confiance."
+          },
+          {
+            "title": "Un nettoyage avec compte à rebours",
+            "text": "Des règles signalent les titres oubliés selon l'âge, l'historique ou le nombre de lectures. Ils attendent dans une liste « bientôt retiré », avec des rappels avant toute suppression."
           },
           {
             "title": "Plugins signés et isolés",
@@ -183,7 +191,7 @@
     "dockerStep2": "Indiquez le chemin de vos médias et les mots de passe, puis lancez le serveur",
     "copy": "Copier",
     "copied": "Copié",
-    "otherWays": "Les programmes d'installation Windows et macOS sont sur la page des versions.",
+    "otherWays": "Les programmes d'installation Windows et macOS sont sur la page des versions. Linux est disponible sur APT et le Snap Store.",
     "linkQuickStart": "Guide de démarrage rapide",
     "linkDocker": "Guide d'installation Docker",
     "linkPlugins": "Gérer les plugins",
@@ -281,9 +289,9 @@
       },
       {
         "name": "Ordinateur",
-        "source": "Fichiers joints aux versions",
+        "source": "Fichiers joints aux versions, APT, Snap Store",
         "minimum": "macOS : Apple Silicon",
-        "notes": "Windows .exe, macOS .dmg, Linux .deb / AppImage"
+        "notes": "Windows .exe, macOS .dmg, Linux APT, Snap, .deb ou AppImage"
       },
       {
         "name": "Chromecast",
@@ -381,6 +389,7 @@
     "getFliks": "Installer le serveur",
     "getFliksText": "Téléchargez la dernière version, ou suivez le démarrage rapide avec Docker.",
     "linkReleases": "Dernière version",
-    "linkQuickStart": "Guide de démarrage rapide"
+    "linkQuickStart": "Guide de démarrage rapide",
+    "linkDesktop": "Guide d'installation pour ordinateur"
   }
 }
