@@ -109,7 +109,11 @@
           },
           {
             "title": "Downloads that keep themselves current",
-            "text": "Set a playlist to automatic: what you have not watched is downloaded, what you have watched is removed. Ready before a trip."
+            "text": "Download a whole season or show in one tap. Set a series or playlist to automatic: the next episodes stay on the device and watched ones are removed. Wifi-only and a storage cap keep it in check."
+          },
+          {
+            "title": "Watch parties",
+            "text": "Press play together: synced playback, chat and voice. Add films to the programme, vote on what to watch, or open a public party. Web, mobile, desktop and Apple TV, with TVs following along."
           }
         ]
       },
@@ -131,6 +135,10 @@
           {
             "title": "Requests with auto-approval",
             "text": "Household members ask for titles; rules you set approve the ones you trust."
+          },
+          {
+            "title": "Cleanup with a countdown",
+            "text": "Rules flag stale titles by age, play history or play count. They wait in a leaving-soon list, with reminders before anything is removed."
           },
           {
             "title": "Signed, isolated plugins",
@@ -183,7 +191,7 @@
     "dockerStep2": "Set your media path and passwords, then start it",
     "copy": "Copy",
     "copied": "Copied",
-    "otherWays": "Windows and macOS installers are on the releases page.",
+    "otherWays": "Windows and macOS installers are on the releases page. Linux is on APT and the Snap Store.",
     "linkQuickStart": "Quick start guide",
     "linkDocker": "Docker install guide",
     "linkPlugins": "Managing plugins",
@@ -281,9 +289,9 @@
       },
       {
         "name": "Desktop",
-        "source": "Release assets",
+        "source": "Release assets, APT, Snap Store",
         "minimum": "macOS: Apple Silicon",
-        "notes": "Windows .exe, macOS .dmg, Linux .deb / AppImage"
+        "notes": "Windows .exe, macOS .dmg, Linux APT, Snap, .deb or AppImage"
       },
       {
         "name": "Chromecast",
@@ -381,6 +389,7 @@
     "getFliks": "Get the server",
     "getFliksText": "Grab the latest release, or follow the Docker quick start.",
     "linkReleases": "Latest release",
-    "linkQuickStart": "Quick start guide"
+    "linkQuickStart": "Quick start guide",
+    "linkDesktop": "Desktop install guide"
   }
 }

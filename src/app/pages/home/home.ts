@@ -8,7 +8,7 @@ import {
   LucideEyeOff,
   LucideLanguages,
   LucideMonitorSmartphone,
-  LucideSunMedium,
+  LucideUsers,
 } from '@lucide/angular';
 import { ScreenshotTour, TourItem } from '../../shared/screenshot-tour/screenshot-tour';
 import { setPageTitle } from '../../core/page-title';
@@ -57,7 +57,7 @@ export class Home {
     { group: 'sharing', index: 0, icon: LucideMonitorSmartphone },
     { group: 'browsing', index: 0, icon: LucideEyeOff },
     { group: 'sharing', index: 4, icon: LucideCloudDownload },
-    { group: 'watching', index: 4, icon: LucideSunMedium },
+    { group: 'sharing', index: 5, icon: LucideUsers },
   ];
 
   protected readonly tourItems: TourItem[] = [
