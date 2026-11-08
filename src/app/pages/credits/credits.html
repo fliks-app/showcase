@@ -9,7 +9,15 @@
         <h2 class="text-lg font-semibold">
           <a [href]="p.url" target="_blank" rel="noopener" class="link link-hover">{{ p.name }}</a>
         </h2>
-        <p class="mt-1 text-sm text-base-content/70">{{ 'credits.items.' + p.id | translate }}</p>
+        @if (p.id === 'tmdb') {
+          <img src="img/tmdb-logo.svg" [alt]="'credits.tmdbLogoAlt' | translate" class="mt-2 h-6 w-auto" />
+        }
+        <p class="mt-1 text-sm text-base-content/70">
+          {{ 'credits.items.' + p.id | translate }}
+          @if (p.id === 'tvdb') {
+            <a href="https://thetvdb.com/subscribe" target="_blank" rel="noopener" class="link">{{ 'credits.items.tvdbSubscribe' | translate }}</a>.
+          }
+        </p>
       </li>
     }
   </ul>

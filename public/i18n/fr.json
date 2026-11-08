@@ -400,8 +400,8 @@
     "title": "Sources de données",
     "subtitle": "Fliks lit ses métadonnées, images et paroles auprès de ces services, via ses plugins de fournisseurs.",
     "items": {
-      "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB.",
-      "tvdb": "Metadata provided by TheTVDB. Please consider adding missing information or subscribing.",
+      "tmdb": "This product uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.",
+      "tvdb": "Metadata provided by TheTVDB. Please consider adding missing information or",
       "musicbrainz": "Métadonnées musicales de MusicBrainz, un projet de la MetaBrainz Foundation. Les données principales sont en CC0 ; certaines données complémentaires sont en CC BY-NC-SA 3.0.",
       "caa": "Pochettes du Cover Art Archive, un projet de la MetaBrainz Foundation.",
       "listenbrainz": "Données de popularité de ListenBrainz, un projet de la MetaBrainz Foundation.",
@@ -412,8 +412,10 @@
       "googlebooks": "Métadonnées de livres de Google Books.",
       "audible": "Métadonnées de livres audio du catalogue Audible.",
       "audnexus": "Métadonnées et chapitres de livres audio d'Audnexus.",
-      "thexem": "Numérotation de scène de TheXEM."
+      "thexem": "Numérotation de scène de TheXEM.",
+      "tvdbSubscribe": "subscribing"
     },
-    "disclaimer": "Tous les noms et logos sont des marques de leurs propriétaires. Fliks n'est ni affilié à eux ni approuvé par eux."
+    "disclaimer": "Tous les noms et logos sont des marques de leurs propriétaires. Fliks n'est ni affilié à eux ni approuvé par eux.",
+    "tmdbLogoAlt": "TMDB logo"
   }
 }
