@@ -13,5 +13,9 @@ export const routes: Routes = [
     path: 'download',
     loadComponent: () => import('./pages/download/download').then((m) => m.Download),
   },
+  {
+    path: 'credits',
+    loadComponent: () => import('./pages/credits/credits').then((m) => m.Credits),
+  },
 ];
 

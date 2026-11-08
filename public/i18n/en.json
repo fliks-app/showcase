@@ -228,7 +228,8 @@
     "issues": "Report an issue",
     "releases": "Release notes",
     "license": "License",
-    "thirdParty": "Third-party notices"
+    "thirdParty": "Third-party notices",
+    "credits": "Data sources"
   },
   "footer": {
     "tagline": "Your personal video collection, on every screen in the house.",
@@ -391,5 +392,28 @@
     "linkReleases": "Latest release",
     "linkQuickStart": "Quick start guide",
     "linkDesktop": "Desktop install guide"
+  },
+  "credits": {
+    "metaTitle": "Data sources: Fliks",
+    "metaDescription": "The third-party services that provide metadata, images and lyrics to Fliks.",
+    "eyebrow": "Credits",
+    "title": "Data sources",
+    "subtitle": "Fliks reads its metadata, images and lyrics from these services through its provider plugins.",
+    "items": {
+      "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB.",
+      "tvdb": "Metadata provided by TheTVDB. Please consider adding missing information or subscribing.",
+      "musicbrainz": "Music metadata from MusicBrainz, a MetaBrainz Foundation project. Core data is CC0; some supplementary data is CC BY-NC-SA 3.0.",
+      "caa": "Cover art from the Cover Art Archive, a MetaBrainz Foundation project.",
+      "listenbrainz": "Popularity data from ListenBrainz, a MetaBrainz Foundation project.",
+      "fanart": "Artist images from Fanart.tv.",
+      "lrclib": "Synced lyrics from LRCLIB.",
+      "openlibrary": "Book metadata and covers from Open Library, an Internet Archive project.",
+      "bnf": "Book metadata from the general catalogue of the Bibliothèque nationale de France.",
+      "googlebooks": "Book metadata from Google Books.",
+      "audible": "Audiobook metadata from the Audible catalog.",
+      "audnexus": "Audiobook metadata and chapters from Audnexus.",
+      "thexem": "Scene numbering from TheXEM."
+    },
+    "disclaimer": "All names and logos are trademarks of their owners. Fliks is not affiliated with or endorsed by them."
   }
 }
