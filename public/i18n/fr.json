@@ -228,7 +228,8 @@
     "issues": "Signaler un problème",
     "releases": "Notes de version",
     "license": "Licence",
-    "thirdParty": "Composants tiers"
+    "thirdParty": "Composants tiers",
+    "credits": "Sources de données"
   },
   "footer": {
     "tagline": "Votre collection vidéo personnelle, sur tous les écrans de la maison.",
@@ -391,5 +392,28 @@
     "linkReleases": "Dernière version",
     "linkQuickStart": "Guide de démarrage rapide",
     "linkDesktop": "Guide d'installation pour ordinateur"
+  },
+  "credits": {
+    "metaTitle": "Sources de données : Fliks",
+    "metaDescription": "Les services tiers qui fournissent à Fliks ses métadonnées, images et paroles.",
+    "eyebrow": "Crédits",
+    "title": "Sources de données",
+    "subtitle": "Fliks lit ses métadonnées, images et paroles auprès de ces services, via ses plugins de fournisseurs.",
+    "items": {
+      "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB.",
+      "tvdb": "Metadata provided by TheTVDB. Please consider adding missing information or subscribing.",
+      "musicbrainz": "Métadonnées musicales de MusicBrainz, un projet de la MetaBrainz Foundation. Les données principales sont en CC0 ; certaines données complémentaires sont en CC BY-NC-SA 3.0.",
+      "caa": "Pochettes du Cover Art Archive, un projet de la MetaBrainz Foundation.",
+      "listenbrainz": "Données de popularité de ListenBrainz, un projet de la MetaBrainz Foundation.",
+      "fanart": "Images d'artistes de Fanart.tv.",
+      "lrclib": "Paroles synchronisées de LRCLIB.",
+      "openlibrary": "Métadonnées et couvertures de livres d'Open Library, un projet d'Internet Archive.",
+      "bnf": "Métadonnées de livres du catalogue général de la Bibliothèque nationale de France.",
+      "googlebooks": "Métadonnées de livres de Google Books.",
+      "audible": "Métadonnées de livres audio du catalogue Audible.",
+      "audnexus": "Métadonnées et chapitres de livres audio d'Audnexus.",
+      "thexem": "Numérotation de scène de TheXEM."
+    },
+    "disclaimer": "Tous les noms et logos sont des marques de leurs propriétaires. Fliks n'est ni affilié à eux ni approuvé par eux."
   }
 }
