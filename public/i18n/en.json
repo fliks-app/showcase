@@ -4,7 +4,9 @@
     "description": "Fliks is a self-hosted media server and streaming app for your own video collection. Free, open source, AGPL-3.0."
   },
   "common": {
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "copy": "Copy",
+    "copied": "Copied"
   },
   "nav": {
     "features": "Features",
@@ -189,8 +191,6 @@
     "dockerTitle": "Docker, the recommended way",
     "dockerStep1": "Download the compose file",
     "dockerStep2": "Set your media path and passwords, then start it",
-    "copy": "Copy",
-    "copied": "Copied",
     "otherWays": "Windows and macOS installers are on the releases page. Linux is on APT and the Snap Store.",
     "linkQuickStart": "Quick start guide",
     "linkDocker": "Docker install guide",
@@ -239,113 +239,122 @@
     "rights": "Fliks is free and open source software, licensed AGPL-3.0-or-later."
   },
   "download": {
-    "metaTitle": "Download Fliks: every platform",
-    "metaDescription": "Get Fliks for web, iOS, Android, Android TV, Samsung and LG TV, desktop, Chromecast and Apple TV.",
+    "metaTitle": "Download Fliks: server and apps",
+    "metaDescription": "Install the Fliks server with Docker, on Windows, macOS or TrueNAS, then get the apps for desktop, iOS, Android, Apple TV, Android TV, LG and Samsung TVs.",
     "eyebrow": "Download",
     "title": "Fliks on every screen",
-    "subtitle": "The same account, the same history, the same library, wherever you install it.",
-    "clientsTitle": "Clients",
-    "clientTable": {
-      "client": "Client",
-      "source": "Where to get it",
-      "minimum": "Minimum",
-      "notes": "Notes"
-    },
-    "clients": [
-      {
-        "name": "Web / PWA",
-        "source": "Your browser, at the server URL",
-        "minimum": "Any current browser",
-        "notes": "Installable to the home screen"
-      },
-      {
-        "name": "iOS / iPadOS",
-        "source": "App Store",
-        "minimum": "iOS 16.6",
-        "notes": ""
-      },
-      {
-        "name": "Android",
-        "source": "Play Store",
-        "minimum": "Android 6 (API 23)",
-        "notes": "Phone and tablet"
-      },
-      {
-        "name": "Android TV",
-        "source": "Play Store",
-        "minimum": "Android 6",
-        "notes": ""
-      },
-      {
-        "name": "Samsung TV (Tizen)",
-        "source": "Sideload for now",
-        "minimum": "Tizen 5.5",
-        "notes": "Works fully, not yet on the Samsung app store"
-      },
-      {
-        "name": "LG TV (webOS)",
-        "source": "LG Content Store",
-        "minimum": "webOS 7.0",
-        "notes": "Approved, on the store"
-      },
-      {
-        "name": "Desktop",
-        "source": "Release assets, APT, Snap Store",
-        "minimum": "macOS: Apple Silicon",
-        "notes": "Windows .exe, macOS .dmg, Linux APT, Snap, .deb or AppImage"
-      },
-      {
-        "name": "Chromecast",
-        "source": "Built in, cast from any client",
-        "minimum": "Any",
-        "notes": "Custom receiver, same player engine"
-      },
-      {
-        "name": "Apple TV",
-        "source": "App Store",
-        "minimum": "tvOS 17",
-        "notes": "Native SwiftUI app"
-      },
-      {
-        "name": "Nintendo Switch",
-        "source": "Build the .nro from switchfliks",
-        "minimum": "Homebrew-enabled console",
-        "notes": "Beta, native client with hardware decode"
+    "subtitle": "Install the server once, on the machine that holds your media, then watch from any screen with the same account.",
+    "latest": "Latest version: v{{version}}",
+    "releaseNotes": "Release notes",
+    "downloadFile": "Download {{file}}",
+    "guide": "Install guide",
+    "server": {
+      "title": "Install the server",
+      "subtitle": "It scans your media, streams it and keeps every account in sync.",
+      "tabs": {
+        "docker": {
+          "label": "Docker",
+          "text": "The recommended way. Download the example Compose file, set the database passwords and your media folder, then start it and open http://<host>:4848.",
+          "meta": "linux/amd64, linux/arm64 · Intel QSV, VAAPI, NVIDIA NVENC"
+        },
+        "windows": {
+          "label": "Windows",
+          "text": "A tray app that bundles PostgreSQL, FFmpeg and the server: nothing else to install, no administrator prompt.",
+          "meta": "Windows 10 or 11, x64 · Intel QSV, AMD AMF, NVIDIA NVENC, auto-detected"
+        },
+        "macos": {
+          "label": "macOS",
+          "text": "A menu-bar app that bundles everything it needs. Signed and notarized, it updates itself.",
+          "meta": "macOS 13 or later, Apple Silicon · VideoToolbox"
+        },
+        "truenas": {
+          "label": "TrueNAS",
+          "text": "In Apps > Discover Apps, enable the Community train and install fliks. Set a database password and add your media under Additional Storage.",
+          "meta": "TrueNAS SCALE · web UI on port 30485"
+        },
+        "source": {
+          "label": "From source",
+          "text": "Build the Rust server and the web client yourself. You provide PostgreSQL and FFmpeg.",
+          "meta": "Any platform Rust targets · whatever your FFmpeg exposes"
+        }
       }
-    ],
-    "serverTitle": "Server",
-    "serverTable": {
-      "how": "How you run it",
-      "platforms": "Platforms",
-      "hardware": "Hardware transcoding",
-      "shipsWith": "Ships with"
     },
-    "servers": [
-      {
-        "how": "Docker (recommended)",
-        "platforms": "linux/amd64, linux/arm64",
-        "hardware": "Intel QSV, VAAPI, NVIDIA NVENC, AMD",
-        "shipsWith": "Backend, web client, FFmpeg"
+    "clients": {
+      "title": "Watch on your screens",
+      "subtitle": "Every app connects to your server: enter its address, sign in, and your library, progress and preferences follow you.",
+      "groups": {
+        "computer": {
+          "title": "Computer",
+          "detailsTitle": "Linux with APT or Snap",
+          "details": "On Ubuntu 24.04, Debian 13 or later, add the Fliks repository and install the app with APT. Or run sudo snap install fliks. The desktop app plays through mpv, so it Direct Plays more formats than a browser."
+        },
+        "mobile": {
+          "title": "Phone and tablet",
+          "detailsTitle": "Offline downloads",
+          "details": "Both apps save titles for offline viewing and download in the background. The .apk is the same Android app, for devices without Google Play."
+        },
+        "tv": {
+          "title": "TV",
+          "detailsTitle": "Sign in on a TV",
+          "details": "Choose Quick Connect: the TV shows a code you type on your phone, under Login requests. Fliks is not on Samsung Apps yet: the .wgt is sideloaded with Tizen Studio, see the Samsung guide."
+        },
+        "other": {
+          "title": "Nothing to install",
+          "detailsTitle": "Install the web app",
+          "details": "Open your server's address in a browser and sign in. Its Install option adds Fliks to your home screen or desktop, in its own window. Chromecast is a cast target from any app."
+        }
       },
-      {
-        "how": "Windows, tray app, NSIS installer",
-        "platforms": "Windows x64",
-        "hardware": "Intel QSV, AMD AMF, NVIDIA NVENC, auto-detected",
-        "shipsWith": "Everything, no dependencies"
-      },
-      {
-        "how": "macOS, menu-bar app, .dmg",
-        "platforms": "macOS 13 Ventura+, Apple Silicon",
-        "hardware": "VideoToolbox",
-        "shipsWith": "Everything, no dependencies"
-      },
-      {
-        "how": "From source",
-        "platforms": "Anywhere Node runs",
-        "hardware": "Whatever your FFmpeg exposes",
-        "shipsWith": ""
+      "platforms": {
+        "windows": {
+          "name": "Windows",
+          "min": "Windows 10 or later, x64"
+        },
+        "macos": {
+          "name": "macOS",
+          "min": "macOS 13 or later, Apple Silicon"
+        },
+        "linux": {
+          "name": "Linux",
+          "min": "Ubuntu 24.04, Debian 13 or later"
+        },
+        "ios": {
+          "name": "iPhone and iPad",
+          "min": "iOS 16.6 or later"
+        },
+        "android": {
+          "name": "Android",
+          "min": "Android 7 or later"
+        },
+        "appletv": {
+          "name": "Apple TV",
+          "min": "tvOS 17 or later"
+        },
+        "androidtv": {
+          "name": "Android TV",
+          "min": "Android 7 or later"
+        },
+        "lg": {
+          "name": "LG TV",
+          "min": "webOS 7 or later"
+        },
+        "samsung": {
+          "name": "Samsung TV",
+          "min": "Tizen 6.5 or later, sideloaded"
+        },
+        "web": {
+          "name": "Web browser",
+          "min": "Any current browser, at your server's address"
+        },
+        "chromecast": {
+          "name": "Chromecast",
+          "min": "Cast from any app"
+        },
+        "switch": {
+          "name": "Nintendo Switch (beta)",
+          "min": "Homebrew-enabled console"
+        }
       }
-    ],
+    },
     "encodersTitle": "Encoders",
     "encodersSubtitle": "Which hardware path is available depends on the machine, not on Fliks. It probes at startup and falls back to CPU when nothing else answers.",
     "encodersHeaders": {
@@ -386,12 +395,7 @@
         "vt": "-"
       }
     ],
-    "encodersNote": "HDR10, HLG and Dolby Vision are tone-mapped to SDR when the receiving device cannot render them.",
-    "getFliks": "Get the server",
-    "getFliksText": "Grab the latest release, or follow the Docker quick start.",
-    "linkReleases": "Latest release",
-    "linkQuickStart": "Quick start guide",
-    "linkDesktop": "Desktop install guide"
+    "encodersNote": "HDR10, HLG and Dolby Vision are tone-mapped to SDR when the receiving device cannot render them."
   },
   "credits": {
     "metaTitle": "Data sources: Fliks",
