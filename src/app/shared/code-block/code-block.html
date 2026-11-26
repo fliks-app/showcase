@@ -1,0 +1,8 @@
+<div class="mockup-code relative text-sm">
+  @for (line of lines(); track $index) {
+    <pre data-prefix="$"><code>{{ line }}</code></pre>
+  }
+  <button type="button" class="btn btn-xs absolute top-2 right-2" (click)="copy()">
+    {{ (copied() ? 'common.copied' : 'common.copy') | translate }}
+  </button>
+</div>

@@ -124,14 +124,7 @@
         <span class="flex size-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm font-semibold">1</span>
         <div class="min-w-0 flex-1">
           <p class="font-semibold">{{ 'getStarted.dockerStep1' | translate }}</p>
-          <div class="mockup-code relative mt-3 text-sm">
-            @for (line of dockerDownloadLines; track line) {
-              <pre data-prefix="$"><code>{{ line }}</code></pre>
-            }
-            <button type="button" class="btn btn-xs absolute top-2 right-2" (click)="copy(dockerDownload, 'download')">
-              {{ (copiedBlock() === 'download' ? 'getStarted.copied' : 'getStarted.copy') | translate }}
-            </button>
-          </div>
+          <app-code-block class="mt-3 block" [lines]="dockerDownloadLines" />
         </div>
       </div>
 
@@ -139,12 +132,7 @@
         <span class="flex size-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm font-semibold">2</span>
         <div class="min-w-0 flex-1">
           <p class="font-semibold">{{ 'getStarted.dockerStep2' | translate }}</p>
-          <div class="mockup-code relative mt-3 text-sm">
-            <pre data-prefix="$"><code>{{ dockerUp }}</code></pre>
-            <button type="button" class="btn btn-xs absolute top-2 right-2" (click)="copy(dockerUp, 'up')">
-              {{ (copiedBlock() === 'up' ? 'getStarted.copied' : 'getStarted.copy') | translate }}
-            </button>
-          </div>
+          <app-code-block class="mt-3 block" [lines]="dockerUp" />
         </div>
       </div>
 

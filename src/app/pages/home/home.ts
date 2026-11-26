@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import {
@@ -10,22 +10,28 @@ import {
   LucideMonitorSmartphone,
   LucideUsers,
 } from '@lucide/angular';
+import { DOCKER_DOWNLOAD_LINES, DOCKER_UP } from '../../core/docker';
+import { CodeBlock } from '../../shared/code-block/code-block';
 import { ScreenshotTour, TourItem } from '../../shared/screenshot-tour/screenshot-tour';
 import { setPageTitle } from '../../core/page-title';
 import { setSeo } from '../../core/seo';
 
-const DOCKER_DOWNLOAD_LINES = [
-  'curl -LO https://raw.githubusercontent.com/fliks-app/fliks/main/docker-compose.example.yml',
-  'mv docker-compose.example.yml docker-compose.yml',
-];
-const DOCKER_UP = 'docker compose up -d';
-
 // Client OSes derived from the fliks README platform table (excludes device-only entries like Chromecast).
-const OPERATING_SYSTEMS = ['Windows', 'macOS', 'Linux', 'iOS', 'iPadOS', 'Android', 'tvOS', 'Tizen', 'webOS'];
+const OPERATING_SYSTEMS = [
+  'Windows',
+  'macOS',
+  'Linux',
+  'iOS',
+  'iPadOS',
+  'Android',
+  'tvOS',
+  'Tizen',
+  'webOS',
+];
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, TranslatePipe, ScreenshotTour, LucideDynamicIcon],
+  imports: [RouterLink, TranslatePipe, ScreenshotTour, CodeBlock, LucideDynamicIcon],
   templateUrl: './home.html',
 })
 export class Home {
@@ -62,29 +68,23 @@ export class Home {
 
   protected readonly tourItems: TourItem[] = [
     { image: 'img/screenshots/home.webp', labelKey: 'tour.tabs.home', altKey: 'tour.alt.home' },
-    { image: 'img/screenshots/library.webp', labelKey: 'tour.tabs.library', altKey: 'tour.alt.library' },
-    { image: 'img/screenshots/detail.webp', labelKey: 'tour.tabs.detail', altKey: 'tour.alt.detail' },
-    { image: 'img/screenshots/player.webp', labelKey: 'tour.tabs.player', altKey: 'tour.alt.player' },
+    {
+      image: 'img/screenshots/library.webp',
+      labelKey: 'tour.tabs.library',
+      altKey: 'tour.alt.library',
+    },
+    {
+      image: 'img/screenshots/detail.webp',
+      labelKey: 'tour.tabs.detail',
+      altKey: 'tour.alt.detail',
+    },
+    {
+      image: 'img/screenshots/player.webp',
+      labelKey: 'tour.tabs.player',
+      altKey: 'tour.alt.player',
+    },
   ];
 
   protected readonly dockerDownloadLines = DOCKER_DOWNLOAD_LINES;
-  protected readonly dockerDownload = DOCKER_DOWNLOAD_LINES.join('\n');
   protected readonly dockerUp = DOCKER_UP;
-  protected readonly copiedBlock = signal<string | null>(null);
-
-  copy(text: string, id: string): void {
-    navigator.clipboard
-      ?.writeText(text)
-      .then(() => {
-        this.copiedBlock.set(id);
-        setTimeout(() => {
-          if (this.copiedBlock() === id) {
-            this.copiedBlock.set(null);
-          }
-        }, 1500);
-      })
-      .catch(() => {
-        // Clipboard access can be denied; the snippet is still selectable by hand.
-      });
-  }
 }

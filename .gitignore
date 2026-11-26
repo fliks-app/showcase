@@ -45,3 +45,6 @@ Thumbs.db
 
 # Local preview copies
 /x
+
+# Written by scripts/latest-release.mjs before each build
+/src/generated
